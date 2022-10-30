@@ -65,4 +65,7 @@ plot(dat$WGD,dat$SEQUENCING_TYPE)
 ```{r}
 summary(dat)
 ```
+```{r}
+str(dat)
+```
 
