@@ -15,57 +15,89 @@ This is an R Markdown document. Markdown is a simple formatting syntax for autho
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
 ```{r}
-dat <- read.delim("~/Desktop/Akhilesh_projecct/data/pancan_pcawg_2020/data_clinical_sample.txt",header=TRUE,stringsAsFactor = TRUE,comment.char = "#")
+```
+
+```{r}
+dat <- read.delim("~/Desktop/myproject/data/pancan_pcawg_2020/data_clinical_sample.txt",header=TRUE,stringsAsFactor = TRUE,comment.char = "#")
   head(dat)
 
 ```
+
 ```{r}
 tail(dat)
 ```
+
 ```{r}
 class(dat)
 ```
+
 ```{r}
 dim(dat)
 ```
+
 ```{r}
 typeof(dat)
 ```
+
 ```{r}
 str(dat)
 ```
+
 ```{r}
 table(dat$WGD)
 ```
+
 ```{r}
 table(dat$WGD,dat$SEQUENCING_TYPE)
 ```
+
 ```{r}
 plot(dat$WGD)
 ```
+
 ```{r}
 plot(dat$WGD,dat$SEQUENCING_TYPE)
 ```
 
-
 ```{r}
 summary(dat)
 ```
+
 ```{r}
 str(dat)
 ```
 
+```{r}
+
+```
+library(ggplot2)
+```{r}
+library(ggplot2)
+ggplot(data = dat, mapping = aes(x = PURITY, y = PLOIDY)) +
+  geom_point()
+
+```
+
+```{r}
+ggplot(dat, aes(x=PURITY)) + geom_histogram(binwidth=.1)
+```
+```{r}
+ggplot(dat, aes(x=PURITY)) + geom_histogram(binwidth=.1,colour="black", fill="white")
+```
+```{r}
+ggplot(dat, aes(x=PURITY)) + geom_density()
+```
+```{r}
+ggplot(dat, aes(x=PURITY)) + geom_histogram(aes(y=..density..),      # Histogram with density instead of count on y-axis
+                   binwidth=.1,
+                   colour="black", fill="white")+ geom_density(alpha=.2, fill="#FF6666")
+```
+```{r}
+ggplot(dat, aes(x=PURITY)) + geom_histogram(
+                   binwidth=.1,
+                   colour="black", fill="white")+ geom_vline(aes(xintercept=mean(PURITY, na.rm=T)),   # Ignore NA values for mean
+               color="red", linetype="dashed", size=1)
+```
