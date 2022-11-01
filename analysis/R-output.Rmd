@@ -101,3 +101,39 @@ ggplot(dat, aes(x=PURITY)) + geom_histogram(
                    colour="black", fill="white")+ geom_vline(aes(xintercept=mean(PURITY, na.rm=T)),   # Ignore NA values for mean
                color="red", linetype="dashed", size=1)
 ```
+```{r}
+dat1 <- read.delim("~/Desktop/myproject/data/pancan_pcawg_2020/data_clinical_patient.txt",header=TRUE,stringsAsFactor = TRUE,comment.char = "#")
+  head(dat1)
+```
+```{r}
+ggplot(data=dat1, aes(x=AGE)) +
+    geom_bar(width=5,colour="black",fill="blue")
+```
+```{r}
+# Add title, narrower bars, fill color, and change axis labels
+ggplot(data=dat1, aes(x=AGE)) +
+    geom_bar(width=1,colour="black",fill="blue",stat="count")+ 
+    xlab("Age of patients") +
+    ggtitle("Age distribution of patients")
+```
+```{r}
+# Mutation count
+ggplot(data=dat1, aes(x=AGE)) +
+    geom_bar(width=1,colour="black",fill="blue",stat="count")+ 
+    guides(fill=FALSE) +
+    xlab("Age of patients") +
+    ggtitle("Age distribution of patients")
+
+```
+
+```{r}
+dat2 <- read.delim("~/Desktop/myproject/data/pancan_pcawg_2020_clinical_data.txt",header=TRUE,stringsAsFactor = TRUE,comment.char = "#")
+  head(dat2)
+```
+```{r}
+summary(dat2)
+```
+```{r}
+
+```
+

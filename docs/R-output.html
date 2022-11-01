@@ -397,9 +397,9 @@ aria-hidden="true"></span> </a>
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 5
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> 1
+aria-hidden="true"></span> 2
 </p>
 <p>
 <strong>Knit directory:</strong> <code>myproject/</code> <span
@@ -422,18 +422,21 @@ versions</em> tab lists the development history.
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
-<span class="glyphicon glyphicon-ok text-success"
-aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
-</a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
+<span class="glyphicon glyphicon-exclamation-sign text-danger"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
+changes </a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguptodate"
+<div id="strongRMarkdownfilestronguncommittedchanges"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>Great! Since the R Markdown file has been committed to the Git
-repository, you know the exact version of the code that produced these
-results.</p>
+<p>The R Markdown file has unstaged changes. To know which version of
+the R Markdown file created these results, you’ll want to first commit
+it to the Git repo. If you’re still working on the analysis, you can
+ignore this warning. When you’re finished, you can run
+<code>wflow_publish</code> to commit the R Markdown file and build the
+HTML.</p>
 </div>
 </div>
 </div>
@@ -542,6 +545,22 @@ relative
 data/pancan_pcawg_2020/data_clinical_sample.txt
 </td>
 </tr>
+<tr>
+<td style="text-align:left;">
+~/Desktop/myproject/data/pancan_pcawg_2020/data_clinical_patient.txt
+</td>
+<td style="text-align:left;">
+data/pancan_pcawg_2020/data_clinical_patient.txt
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+~/Desktop/myproject/data/pancan_pcawg_2020_clinical_data.txt
+</td>
+<td style="text-align:left;">
+data/pancan_pcawg_2020_clinical_data.txt
+</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -550,15 +569,15 @@ data/pancan_pcawg_2020/data_clinical_sample.txt
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomAkhileshpandey87myprojecttree6c06e13f3f4bece7f9a9ede58c6060a37da32e59targetblank6c06e13a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomAkhileshpandey87myprojecttreec8855f967f6de73376d1962e1010d48f3d055e9etargetblankc8855f9a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/Akhileshpandey87/myproject/tree/6c06e13f3f4bece7f9a9ede58c6060a37da32e59" target="_blank">6c06e13</a>
+<a href="https://github.com/Akhileshpandey87/myproject/tree/c8855f967f6de73376d1962e1010d48f3d055e9e" target="_blank">c8855f9</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomAkhileshpandey87myprojecttree6c06e13f3f4bece7f9a9ede58c6060a37da32e59targetblank6c06e13a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomAkhileshpandey87myprojecttreec8855f967f6de73376d1962e1010d48f3d055e9etargetblankc8855f9a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -568,7 +587,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/Akhileshpandey87/myproject/tree/6c06e13f3f4bece7f9a9ede58c6060a37da32e59" target="_blank">6c06e13</a>.
+<a href="https://github.com/Akhileshpandey87/myproject/tree/c8855f967f6de73376d1962e1010d48f3d055e9e" target="_blank">c8855f9</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -589,10 +608,12 @@ Ignored files:
 
 Untracked files:
     Untracked:  data/pancan_pcawg_2020/
+    Untracked:  data/pancan_pcawg_2020_clinical_data.txt
     Untracked:  site_libs/
 
 Unstaged changes:
     Deleted:    analysis/R output.Rmd
+    Modified:   analysis/R-output.Rmd
 
 </code></pre>
 <p>
@@ -638,6 +659,23 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/Akhileshpandey87/myproject/c8855f967f6de73376d1962e1010d48f3d055e9e/docs/R-output.html" target="_blank">c8855f9</a>
+</td>
+<td>
+Akhileshpandey87
+</td>
+<td>
+2022-11-01
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -1072,6 +1110,290 @@ ggplot(data = dat, mapping = aes(x = PURITY, y = PLOIDY)) +
                color=&quot;red&quot;, linetype=&quot;dashed&quot;, size=1)</code></pre>
 <pre><code>Warning: Removed 219 rows containing non-finite values (stat_bin).</code></pre>
 <p><img src="figure/R-output.Rmd/unnamed-chunk-20-1.png" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>dat1 &lt;- read.delim(&quot;~/Desktop/myproject/data/pancan_pcawg_2020/data_clinical_patient.txt&quot;,header=TRUE,stringsAsFactor = TRUE,comment.char = &quot;#&quot;)
+  head(dat1)</code></pre>
+<pre><code>  PATIENT_ID    SEX  OS_STATUS OS_MONTHS FIRST_THERAPY FIRST.THERAPY_RESPONSE
+1      DO472   Male   0:LIVING        NA          &lt;NA&gt;                   &lt;NA&gt;
+2      DO477   Male 1:DECEASED        NA          &lt;NA&gt;                   &lt;NA&gt;
+3      DO479   Male   0:LIVING        NA          &lt;NA&gt;                   &lt;NA&gt;
+4      DO483 Female   0:LIVING        NA          &lt;NA&gt;                   &lt;NA&gt;
+5      DO496 Female   0:LIVING         0          &lt;NA&gt;                   &lt;NA&gt;
+6      DO498   Male   0:LIVING         0          &lt;NA&gt;                   &lt;NA&gt;
+  AGE TOBACCO_SMOKING_HISTORY_INDICATOR TOBACCO_SMOKING_INTENSITY ALCOHOL
+1  53                              &lt;NA&gt;                        NA    &lt;NA&gt;
+2  79                              &lt;NA&gt;                        NA    &lt;NA&gt;
+3  34                              &lt;NA&gt;                        NA    &lt;NA&gt;
+4  67                              &lt;NA&gt;                        NA    &lt;NA&gt;
+5  53                              &lt;NA&gt;                        NA    &lt;NA&gt;
+6  84                              &lt;NA&gt;                        NA    &lt;NA&gt;
+  ALCOHOL_HISTORY_INTENSITY
+1                      &lt;NA&gt;
+2                      &lt;NA&gt;
+3                      &lt;NA&gt;
+4                      &lt;NA&gt;
+5                      &lt;NA&gt;
+6                      &lt;NA&gt;</code></pre>
+<pre class="r"><code>ggplot(data=dat1, aes(x=AGE)) +
+    geom_bar(width=5,colour=&quot;black&quot;,fill=&quot;blue&quot;)</code></pre>
+<pre><code>Warning: Removed 123 rows containing non-finite values (stat_count).</code></pre>
+<pre><code>Warning: position_stack requires non-overlapping x intervals</code></pre>
+<p><img src="figure/R-output.Rmd/unnamed-chunk-22-1.png" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code># Add title, narrower bars, fill color, and change axis labels
+ggplot(data=dat1, aes(x=AGE)) +
+    geom_bar(width=1,colour=&quot;black&quot;,fill=&quot;blue&quot;,stat=&quot;count&quot;)+ 
+    xlab(&quot;Age of patients&quot;) +
+    ggtitle(&quot;Age distribution of patients&quot;)</code></pre>
+<pre><code>Warning: Removed 123 rows containing non-finite values (stat_count).</code></pre>
+<p><img src="figure/R-output.Rmd/unnamed-chunk-23-1.png" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code># Mutation count
+ggplot(data=dat1, aes(x=AGE)) +
+    geom_bar(width=1,colour=&quot;black&quot;,fill=&quot;blue&quot;,stat=&quot;count&quot;)+ 
+    guides(fill=FALSE) +
+    xlab(&quot;Age of patients&quot;) +
+    ggtitle(&quot;Age distribution of patients&quot;)</code></pre>
+<pre><code>Warning: `guides(&lt;scale&gt; = FALSE)` is deprecated. Please use `guides(&lt;scale&gt; =
+&quot;none&quot;)` instead.</code></pre>
+<pre><code>Warning: Removed 123 rows containing non-finite values (stat_count).</code></pre>
+<p><img src="figure/R-output.Rmd/unnamed-chunk-24-1.png" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>dat2 &lt;- read.delim(&quot;~/Desktop/myproject/data/pancan_pcawg_2020_clinical_data.txt&quot;,header=TRUE,stringsAsFactor = TRUE,comment.char = &quot;#&quot;)
+  head(dat2)</code></pre>
+<pre><code>           Study.ID Patient.ID Sample.ID Age.at.Diagnosis Alcohol
+1 pancan_pcawg_2020      DO496    SP1003               53    &lt;NA&gt;
+2 pancan_pcawg_2020     DO4766   SP10084               64    &lt;NA&gt;
+3 pancan_pcawg_2020      DO498    SP1009               84    &lt;NA&gt;
+4 pancan_pcawg_2020     DO4796   SP10150               48    &lt;NA&gt;
+5 pancan_pcawg_2020    DO46325  SP101515               54    &lt;NA&gt;
+6 pancan_pcawg_2020    DO46327  SP101519               54    &lt;NA&gt;
+  Alcohol.History.Intensity Primary.Ancestry    Cancer.Type
+1                      &lt;NA&gt;              EUR Bladder Cancer
+2                      &lt;NA&gt;              EUR  Breast Cancer
+3                      &lt;NA&gt;              EUR Bladder Cancer
+4                      &lt;NA&gt;              EUR  Breast Cancer
+5                      &lt;NA&gt;              EUR Ovarian Cancer
+6                      &lt;NA&gt;              EUR Ovarian Cancer
+              Cancer.Type.Detailed Cellularity First.Therapy.Response
+1  Bladder Squamous Cell Carcinoma          NA                   &lt;NA&gt;
+2 Breast Invasive Ductal Carcinoma          90                   &lt;NA&gt;
+3  Bladder Squamous Cell Carcinoma          80                   &lt;NA&gt;
+4 Breast Invasive Ductal Carcinoma          80                   &lt;NA&gt;
+5            Serous Ovarian Cancer          73                   &lt;NA&gt;
+6            Serous Ovarian Cancer          77                   &lt;NA&gt;
+  First.Therapy Grade                        Histology Histology.Abbreviation
+1          &lt;NA&gt;  &lt;NA&gt;  Papillary trans. cell carcinoma            Bladder-TCC
+2          &lt;NA&gt;  &lt;NA&gt; Infiltrating duct carcinoma, NOS         Breast-AdenoCA
+3          &lt;NA&gt;  &lt;NA&gt; Transitional cell carcinoma, NOS            Bladder-TCC
+4          &lt;NA&gt;  &lt;NA&gt; Infiltrating duct carcinoma, NOS         Breast-AdenoCA
+5          &lt;NA&gt;    G3   Serous cystadenocarcinoma, NOS          Ovary-AdenoCA
+6          &lt;NA&gt;    G3   Serous cystadenocarcinoma, NOS          Ovary-AdenoCA
+  Histology.Tier1 Histology.Tier2             Histology.Tier3
+1        ENDODERM         Bladder Transitional cell carcinoma
+2        ECTODERM          Breast              Adenocarcinoma
+3        ENDODERM         Bladder Transitional cell carcinoma
+4        ECTODERM          Breast              Adenocarcinoma
+5        MESODERM           Ovary              Adenocarcinoma
+6        MESODERM           Ovary              Adenocarcinoma
+                         Histology.Tier4 ICD.10.Classification ICGC.Sample.ID
+1 Transitional cell carcinoma, papillary                 C67.9         SA4557
+2            Infiltrating duct carcinoma                 C50.9        SA48667
+3            Transitional cell carcinoma                 C67.9         SA4666
+4            Infiltrating duct carcinoma                 C50.9        SA49610
+5              Serous cystadenocarcinoma                 C48.2       SA505244
+6              Serous cystadenocarcinoma                   C56       SA505270
+  Mutation.Count Oncotree.Code    Organ.System Overall.Survival..Months.
+1            250          BLSC URINARY BLADDER                  0.000000
+2             61           IDC          BREAST                  0.000000
+3            120          BLSC URINARY BLADDER                  0.000000
+4             75           IDC          BREAST                  0.000000
+5             62           SOC           OVARY                 15.690789
+6             64           SOC           OVARY                  6.052632
+  Overall.Survival.Status Ploidy Project.Code Purity Purity.Configuration
+1                0:LIVING  3.228      BLCA-US  0.613                0.016
+2                0:LIVING  3.986      BRCA-US  0.693                0.002
+3                0:LIVING  2.002      BLCA-US  0.827                0.028
+4                0:LIVING  3.359      BRCA-US  0.727                0.031
+5              1:DECEASED  2.112        OV-AU  0.540                0.023
+6              1:DECEASED  2.623        OV-AU  0.478                0.010
+  Sample.Class Number.of.Samples.Per.Patient Sample.Type Sequencing.Type    Sex
+1        Tumor                             1     Primary             WGS Female
+2        Tumor                             1     Primary             WGS Female
+3        Tumor                             1     Primary             WGS   Male
+4        Tumor                             1     Primary             WGS Female
+5        Tumor                             1     Primary             WGS Female
+6        Tumor                             1     Primary             WGS Female
+  Tumor.Stage..AJCC. TMB..nonsynonymous. Patient.Smoking.History.Category
+1               &lt;NA&gt;            8.433333                             &lt;NA&gt;
+2               &lt;NA&gt;            2.066667                             &lt;NA&gt;
+3               &lt;NA&gt;            4.000000                             &lt;NA&gt;
+4               &lt;NA&gt;            2.500000                             &lt;NA&gt;
+5                III            2.066667                             &lt;NA&gt;
+6                III            2.100000                             &lt;NA&gt;
+  Tobacco.Smoking.Intensity Tumor.Sample.Histology.Code
+1                        NA                      8130/3
+2                        NA                      8500/3
+3                        NA                      8120/3
+4                        NA                      8500/3
+5                        NA                      8441/3
+6                        NA                      8441/3
+  Whole.Genome.Duplication
+1                      wgd
+2                      wgd
+3                   no_wgd
+4                      wgd
+5                   no_wgd
+6                      wgd</code></pre>
+<pre class="r"><code>summary(dat2)</code></pre>
+<pre><code>              Study.ID      Patient.ID      Sample.ID    Age.at.Diagnosis
+ pancan_pcawg_2020:2922   DO51954:  10   SP1003  :   1   Min.   : 1.00   
+                          DO51964:   9   SP10084 :   1   1st Qu.:49.00   
+                          DO52509:   6   SP1009  :   1   Median :60.00   
+                          DO52510:   6   SP10150 :   1   Mean   :56.58   
+                          DO52512:   6   SP101515:   1   3rd Qu.:70.00   
+                          DO52513:   6   SP101519:   1   Max.   :90.00   
+                          (Other):2879   (Other) :2916   NA&#39;s   :124     
+                Alcohol    
+ Don&#39;t know/Not sure: 989  
+ No                 :  81  
+ Yes                : 181  
+ NA&#39;s               :1671  
+                           
+                           
+                           
+                                  Alcohol.History.Intensity Primary.Ancestry
+ Daily Drinker                                 :  56        AFR : 124       
+ None                                          :  81        AMR :  26       
+ Not Documented                                :1006        ASN : 415       
+ Occassional Drinker (&lt; once a month)          :  19        EUR :1968       
+ Social Drinker (&gt; once a month, &lt; once a week):  49        SAN :  36       
+ Weekly Drinker (&gt;=1x a week)                  :  40        NA&#39;s: 353       
+ NA&#39;s                                          :1671                        
+                 Cancer.Type  
+ Pancreatic Cancer     : 381  
+ Hepatobiliary Cancer  : 358  
+ Prostate Cancer       : 275  
+ Renal Cell Carcinoma  : 235  
+ Breast Cancer         : 213  
+ Esophagogastric Cancer: 165  
+ (Other)               :1295  
+                                              Cancer.Type.Detailed
+ Hepatocellular Carcinoma                               : 315     
+ Pancreatic Adenocarcinoma                              : 283     
+ Prostate Adenocarcinoma                                : 275     
+ Breast Invasive Ductal Carcinoma                       : 180     
+ Renal Clear Cell Carcinoma                             : 160     
+ Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma: 158     
+ (Other)                                                :1551     
+  Cellularity             First.Therapy.Response           First.Therapy 
+ Min.   : 12.00   Complete Response  : 199       No Treatment     : 405  
+ 1st Qu.: 71.00   Disease Progression:  39       Other Therapy    : 245  
+ Median : 84.00   Partial Response   :  20       Chemotherapy     : 214  
+ Mean   : 80.63   Stable Disease     :  64       Surgery          :  65  
+ 3rd Qu.: 95.00   Unknown            : 278       Radiation Therapy:  50  
+ Max.   :100.00   NA&#39;s               :2322       (Other)          :  49  
+ NA&#39;s   :2080                                    NA&#39;s             :1894  
+                           Grade     
+ G3                           :  75  
+ G2                           :  52  
+ II                           :  50  
+ 2 - Moderately differentiated:  37  
+ G4                           :  37  
+ (Other)                      : 148  
+ NA&#39;s                         :2523  
+                                                   Histology   
+ Adenocarcinoma, NOS                                    : 467  
+ Infiltrating duct carcinoma, NOS                       : 402  
+ Hepatocellular carcinoma, NOS                          : 315  
+ Clear cell adenocarcinoma, NOS                         : 160  
+ Chronic lymphocytic leukemia/small lymphocytic lymphoma: 158  
+ (Other)                                                :1344  
+ NA&#39;s                                                   :  76  
+    Histology.Abbreviation     Histology.Tier1 Histology.Tier2
+ Liver-HCC     : 314       ECTODERM    : 211   Liver   : 314  
+ Panc-AdenoCA  : 232       ENDODERM    :1232   Pancreas: 313  
+ Prost-AdenoCA : 199       MESODERM    : 746   CNS     : 287  
+ Breast-AdenoCA: 195       NEURAL_CREST: 394   Breast  : 211  
+ Kidney-RCC    : 143       NA&#39;s        : 339   Prostate: 199  
+ (Other)       :1500                           (Other) :1259  
+ NA&#39;s          : 339                           NA&#39;s    : 339  
+                                Histology.Tier3
+ Adenocarcinoma                         :1118  
+ Hepatocellular carcinoma               : 314  
+ Renal cell carcinoma (proximal tubules): 143  
+ Medulloblastoma                        : 141  
+ Squamous cell carcinoma                : 121  
+ (Other)                                : 746  
+ NA&#39;s                                   : 339  
+                    Histology.Tier4 ICD.10.Classification  ICGC.Sample.ID
+ Adenocarcinoma             : 426   C61    : 275          SA100232:   1  
+ Hepatocellular carcinoma   : 305   C22    : 260          SA100712:   1  
+ Infiltrating duct carcinoma: 191   C25.0  : 212          SA100868:   1  
+ Pancreatic ductal carcinoma: 157   C91.1  : 158          SA101371:   1  
+ Serous cystadenocarcinoma  : 120   0      : 142          SA10195 :   1  
+ (Other)                    :1384   C71    : 141          (Other) :2578  
+ NA&#39;s                       : 339   (Other):1734          NA&#39;s    : 339  
+ Mutation.Count     Oncotree.Code 
+ Min.   :    1.00   HCC    : 323  
+ 1st Qu.:   21.25   PAAD   : 285  
+ Median :   45.00   PRAD   : 275  
+ Mean   :  105.39   IDC    : 180  
+ 3rd Qu.:   84.00   CCRCC  : 160  
+ Max.   :12012.00   CLLSLL : 158  
+ NA&#39;s   :252        (Other):1541  
+                                                                Organ.System 
+ LIVER                                                                : 336  
+ PANCREAS                                                             : 313  
+ BRAIN, &amp; CRANIAL NERVES, &amp; SPINAL CORD, (EXCL. VENTRICLE, CEREBELLUM): 287  
+ BREAST                                                               : 211  
+ PROSTATE GLAND                                                       : 199  
+ (Other)                                                              :1237  
+ NA&#39;s                                                                 : 339  
+ Overall.Survival..Months. Overall.Survival.Status     Ploidy     
+ Min.   : 0.00             0:LIVING  :1905         Min.   :1.283  
+ 1st Qu.:14.11             1:DECEASED: 890         1st Qu.:1.926  
+ Median :29.14             NA&#39;s      : 127         Median :2.000  
+ Mean   :32.95                                     Mean   :2.365  
+ 3rd Qu.:53.22                                     3rd Qu.:2.795  
+ Max.   :94.70                                     Max.   :6.217  
+ NA&#39;s   :2561                                      NA&#39;s   :219    
+  Project.Code      Purity       Purity.Configuration    Sample.Class 
+ LIRI-JP: 260   Min.   :0.1300   Min.   :0.0000       Cell line:   1  
+ PBCA-DE: 230   1st Qu.:0.4730   1st Qu.:0.0060       Tumor    :2919  
+ PACA-AU: 166   Median :0.6590   Median :0.0130       NA&#39;s     :   2  
+ CLLE-ES: 158   Mean   :0.6401   Mean   :0.0211                       
+ PACA-CA: 143   3rd Qu.:0.8240   3rd Qu.:0.0220                       
+ RECA-EU: 123   Max.   :1.0000   Max.   :0.4180                       
+ (Other):1842   NA&#39;s   :219      NA&#39;s   :219                          
+ Number.of.Samples.Per.Patient           Sample.Type      Sequencing.Type
+ Min.   : 1.000                Cell line       :   1   WGS        :2576  
+ 1st Qu.: 1.000                Local Recurrence:  41   WGS+RNA-Seq:   7  
+ Median : 1.000                Metastasis      : 147   NA&#39;s       : 339  
+ Mean   : 1.337                Primary         :2731                     
+ 3rd Qu.: 1.000                NA&#39;s            :   2                     
+ Max.   :10.000                                                          
+                                                                         
+     Sex       Tumor.Stage..AJCC. TMB..nonsynonymous.
+ Female:1285   unknown: 148       Min.   :  0.000    
+ Male  :1637   2      : 119       1st Qu.:  0.700    
+               III    : 104       Median :  1.500    
+               3      :  75       Mean   :  3.507    
+               A      :  66       3rd Qu.:  2.800    
+               (Other):1112       Max.   :402.033    
+               NA&#39;s   :1298       NA&#39;s   :239        
+                                                     Patient.Smoking.History.Category
+ Current reformed smoker for &lt;= 15 years                             :  21           
+ Current reformed smoker for &gt; 15 years                              :  71           
+ Current reformed smoker, duration not specified                     :  74           
+ Current smoker (includes daily smokers non-daily/occasional smokers):  73           
+ Lifelong non-smoker (&lt;100 cigarettes smoked in lifetime)            : 183           
+ Smoking history not documented                                      : 829           
+ NA&#39;s                                                                :1671           
+ Tobacco.Smoking.Intensity Tumor.Sample.Histology.Code Whole.Genome.Duplication
+ Min.   : 0.00             8140/3 : 430                no_wgd:1900             
+ 1st Qu.: 0.00             8500/3 : 348                wgd   : 803             
+ Median :22.00             8170/3 : 305                NA&#39;s  : 219             
+ Mean   :27.65             8070/3 : 120                                        
+ 3rd Qu.:50.00             8441/3 : 120                                        
+ Max.   :86.00             (Other):1260                                        
+ NA&#39;s   :2775              NA&#39;s   : 339                                        </code></pre>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -1098,24 +1420,23 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] ggplot2_3.3.5   workflowr_1.7.0
+[1] ggplot2_3.3.5
 
 loaded via a namespace (and not attached):
- [1] tidyselect_1.1.2 xfun_0.30        bslib_0.3.1      purrr_0.3.4     
- [5] colorspace_2.0-3 vctrs_0.4.0      generics_0.1.2   htmltools_0.5.2 
- [9] yaml_2.3.5       utf8_1.2.2       rlang_1.0.2      jquerylib_0.1.4 
-[13] later_1.3.0      pillar_1.7.0     glue_1.6.2       withr_2.5.0     
-[17] lifecycle_1.0.1  stringr_1.4.0    munsell_0.5.0    gtable_0.3.0    
-[21] evaluate_0.15    labeling_0.4.2   knitr_1.40       callr_3.7.0     
-[25] fastmap_1.1.0    httpuv_1.6.5     ps_1.6.0         fansi_1.0.3     
-[29] highr_0.9        Rcpp_1.0.8.3     promises_1.2.0.1 scales_1.1.1    
-[33] jsonlite_1.8.0   farver_2.1.0     fs_1.5.2         digest_0.6.29   
-[37] stringi_1.7.6    processx_3.5.3   dplyr_1.0.8      getPass_0.2-2   
-[41] rprojroot_2.0.3  grid_4.1.3       cli_3.2.0        tools_4.1.3     
-[45] magrittr_2.0.3   sass_0.4.1       tibble_3.1.6     crayon_1.5.1    
-[49] whisker_0.4      pkgconfig_2.0.3  ellipsis_0.3.2   rmarkdown_2.13  
-[53] httr_1.4.2       rstudioapi_0.13  R6_2.5.1         git2r_0.30.1    
-[57] compiler_4.1.3  </code></pre>
+ [1] Rcpp_1.0.8.3     pillar_1.7.0     compiler_4.1.3   bslib_0.3.1     
+ [5] later_1.3.0      jquerylib_0.1.4  git2r_0.30.1     highr_0.9       
+ [9] workflowr_1.7.0  tools_4.1.3      digest_0.6.29    gtable_0.3.0    
+[13] jsonlite_1.8.0   evaluate_0.15    lifecycle_1.0.1  tibble_3.1.6    
+[17] pkgconfig_2.0.3  rlang_1.0.2      cli_3.2.0        rstudioapi_0.13 
+[21] yaml_2.3.5       xfun_0.30        fastmap_1.1.0    withr_2.5.0     
+[25] dplyr_1.0.8      stringr_1.4.0    knitr_1.40       generics_0.1.2  
+[29] fs_1.5.2         vctrs_0.4.0      sass_0.4.1       tidyselect_1.1.2
+[33] grid_4.1.3       rprojroot_2.0.3  glue_1.6.2       R6_2.5.1        
+[37] fansi_1.0.3      rmarkdown_2.13   farver_2.1.0     purrr_0.3.4     
+[41] magrittr_2.0.3   whisker_0.4      scales_1.1.1     promises_1.2.0.1
+[45] ellipsis_0.3.2   htmltools_0.5.2  colorspace_2.0-3 httpuv_1.6.5    
+[49] labeling_0.4.2   utf8_1.2.2       stringi_1.7.6    munsell_0.5.0   
+[53] crayon_1.5.1    </code></pre>
 </div>
 </div>
 
