@@ -134,6 +134,51 @@ dat2 <- read.delim("~/Desktop/myproject/data/pancan_pcawg_2020_clinical_data.txt
 summary(dat2)
 ```
 ```{r}
+# A basic box plot
+ggplot(dat2, aes(x=Sex, y=Age.at.Diagnosis)) + geom_boxplot()
+```
+```{r}
+# A basic box with the conditions colored
+ggplot(dat2, aes(x=Sex, y=Age.at.Diagnosis,fill=Sex)) + geom_boxplot()
+```
+```{r}
+ggplot(dat2, aes(x=Sex, y=Age.at.Diagnosis,fill=Sex)) + geom_boxplot()+guides(fill=FALSE)
 
 ```
+
+
+
+```{r}
+ggplot(dat2, aes(x=Sex, y=Age.at.Diagnosis,fill=Sex)) + geom_boxplot()+guides(fill=FALSE)+ coord_flip()
+
+```
+```{r}
+ggplot(dat2, aes(x=Sex, y=Age.at.Diagnosis)) + geom_boxplot()+stat_summary(fun.y=mean,geom="point",na.rm=T,shape=5,size=4)
+
+```
+```{r}
+# Basic line graph
+ggplot(data=dat2, aes(x=Sex, y=Age.at.Diagnosis, group=1)) +
+    geom_line()
+```
+```{r}
+# Add points
+ggplot(data=dat2, aes(x=Sex, y=Age.at.Diagnosis)) +
+    geom_line(aes(group=1))+geom_point()
+```
+```{r}
+# Change color of line 
+# Change line type  and use thicker line 
+ggplot(data=dat2, aes(x=Sex, y=Age.at.Diagnosis)) +
+    geom_line(colour="red", linetype="dashed", size=1.5,aes(group=1))
+```
+```{r}
+# Change the y-range to go from 0 to the maximum value in the Age.at.Diagnosis,
+# and change axis labels
+ggplot(data=dat2, aes(x=Sex, y=Age.at.Diagnosis)) +
+    geom_line(aes(group=1))+expand_limits(y=0) +
+    xlab("Gender of patients") + ylab("Age at Diagnosis") +
+    ggtitle("Average age of diagnosis")
+```
+
 
