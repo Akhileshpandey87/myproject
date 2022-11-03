@@ -393,13 +393,13 @@ aria-hidden="true"></span> </a>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2022-11-01
+<strong>Last updated:</strong> 2022-11-03
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 5
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> 2
+aria-hidden="true"></span> 1
 </p>
 <p>
 <strong>Knit directory:</strong> <code>myproject/</code> <span
@@ -422,21 +422,18 @@ versions</em> tab lists the development history.
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
-<span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
-changes </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
+</a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguncommittedchanges"
+<div id="strongRMarkdownfilestronguptodate"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>The R Markdown file has unstaged changes. To know which version of
-the R Markdown file created these results, you’ll want to first commit
-it to the Git repo. If you’re still working on the analysis, you can
-ignore this warning. When you’re finished, you can run
-<code>wflow_publish</code> to commit the R Markdown file and build the
-HTML.</p>
+<p>Great! Since the R Markdown file has been committed to the Git
+repository, you know the exact version of the code that produced these
+results.</p>
 </div>
 </div>
 </div>
@@ -569,15 +566,15 @@ data/pancan_pcawg_2020_clinical_data.txt
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomAkhileshpandey87myprojecttreec8855f967f6de73376d1962e1010d48f3d055e9etargetblankc8855f9a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomAkhileshpandey87myprojecttree77ff564eddd9219da9fb01088a2387dbf3898e77targetblank77ff564a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/Akhileshpandey87/myproject/tree/c8855f967f6de73376d1962e1010d48f3d055e9e" target="_blank">c8855f9</a>
+<a href="https://github.com/Akhileshpandey87/myproject/tree/77ff564eddd9219da9fb01088a2387dbf3898e77" target="_blank">77ff564</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomAkhileshpandey87myprojecttreec8855f967f6de73376d1962e1010d48f3d055e9etargetblankc8855f9a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomAkhileshpandey87myprojecttree77ff564eddd9219da9fb01088a2387dbf3898e77targetblank77ff564a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -587,7 +584,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/Akhileshpandey87/myproject/tree/c8855f967f6de73376d1962e1010d48f3d055e9e" target="_blank">c8855f9</a>.
+<a href="https://github.com/Akhileshpandey87/myproject/tree/77ff564eddd9219da9fb01088a2387dbf3898e77" target="_blank">77ff564</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -610,10 +607,6 @@ Untracked files:
     Untracked:  data/pancan_pcawg_2020/
     Untracked:  data/pancan_pcawg_2020_clinical_data.txt
     Untracked:  site_libs/
-
-Unstaged changes:
-    Deleted:    analysis/R output.Rmd
-    Modified:   analysis/R-output.Rmd
 
 </code></pre>
 <p>
@@ -659,6 +652,57 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/Akhileshpandey87/myproject/blob/77ff564eddd9219da9fb01088a2387dbf3898e77/analysis/R-output.Rmd" target="_blank">77ff564</a>
+</td>
+<td>
+Akhileshpandey87
+</td>
+<td>
+2022-11-03
+</td>
+<td>
+wflow_publish("analysis/R-output.Rmd")
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/Akhileshpandey87/myproject/blob/d42be1f8f648155b5010e289a7424f99d401917e/analysis/R-output.Rmd" target="_blank">d42be1f</a>
+</td>
+<td>
+Akhileshpandey87
+</td>
+<td>
+2022-11-01
+</td>
+<td>
+wflow_git_commit(all = TRUE)
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/Akhileshpandey87/myproject/d42be1f8f648155b5010e289a7424f99d401917e/docs/R-output.html" target="_blank">d42be1f</a>
+</td>
+<td>
+Akhileshpandey87
+</td>
+<td>
+2022-11-01
+</td>
+<td>
+wflow_git_commit(all = TRUE)
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -1394,6 +1438,49 @@ ggplot(data=dat1, aes(x=AGE)) +
  3rd Qu.:50.00             8441/3 : 120                                        
  Max.   :86.00             (Other):1260                                        
  NA&#39;s   :2775              NA&#39;s   : 339                                        </code></pre>
+<pre class="r"><code># A basic box plot
+ggplot(dat2, aes(x=Sex, y=Age.at.Diagnosis)) + geom_boxplot()</code></pre>
+<pre><code>Warning: Removed 124 rows containing non-finite values (stat_boxplot).</code></pre>
+<p><img src="figure/R-output.Rmd/unnamed-chunk-27-1.png" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code># A basic box with the conditions colored
+ggplot(dat2, aes(x=Sex, y=Age.at.Diagnosis,fill=Sex)) + geom_boxplot()</code></pre>
+<pre><code>Warning: Removed 124 rows containing non-finite values (stat_boxplot).</code></pre>
+<p><img src="figure/R-output.Rmd/unnamed-chunk-28-1.png" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>ggplot(dat2, aes(x=Sex, y=Age.at.Diagnosis,fill=Sex)) + geom_boxplot()+guides(fill=FALSE)</code></pre>
+<pre><code>Warning: `guides(&lt;scale&gt; = FALSE)` is deprecated. Please use `guides(&lt;scale&gt; =
+&quot;none&quot;)` instead.</code></pre>
+<pre><code>Warning: Removed 124 rows containing non-finite values (stat_boxplot).</code></pre>
+<p><img src="figure/R-output.Rmd/unnamed-chunk-29-1.png" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>ggplot(dat2, aes(x=Sex, y=Age.at.Diagnosis,fill=Sex)) + geom_boxplot()+guides(fill=FALSE)+ coord_flip()</code></pre>
+<pre><code>Warning: `guides(&lt;scale&gt; = FALSE)` is deprecated. Please use `guides(&lt;scale&gt; =
+&quot;none&quot;)` instead.</code></pre>
+<pre><code>Warning: Removed 124 rows containing non-finite values (stat_boxplot).</code></pre>
+<p><img src="figure/R-output.Rmd/unnamed-chunk-30-1.png" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>ggplot(dat2, aes(x=Sex, y=Age.at.Diagnosis)) + geom_boxplot()+stat_summary(fun.y=mean,geom=&quot;point&quot;,na.rm=T,shape=5,size=4)</code></pre>
+<pre><code>Warning: `fun.y` is deprecated. Use `fun` instead.</code></pre>
+<pre><code>Warning: Removed 124 rows containing non-finite values (stat_boxplot).</code></pre>
+<p><img src="figure/R-output.Rmd/unnamed-chunk-31-1.png" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code># Basic line graph
+ggplot(data=dat2, aes(x=Sex, y=Age.at.Diagnosis, group=1)) +
+    geom_line()</code></pre>
+<p><img src="figure/R-output.Rmd/unnamed-chunk-32-1.png" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code># Add points
+ggplot(data=dat2, aes(x=Sex, y=Age.at.Diagnosis)) +
+    geom_line(aes(group=1))+geom_point()</code></pre>
+<pre><code>Warning: Removed 124 rows containing missing values (geom_point).</code></pre>
+<p><img src="figure/R-output.Rmd/unnamed-chunk-33-1.png" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code># Change color of line 
+# Change line type  and use thicker line 
+ggplot(data=dat2, aes(x=Sex, y=Age.at.Diagnosis)) +
+    geom_line(colour=&quot;red&quot;, linetype=&quot;dashed&quot;, size=1.5,aes(group=1))</code></pre>
+<p><img src="figure/R-output.Rmd/unnamed-chunk-34-1.png" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code># Change the y-range to go from 0 to the maximum value in the Age.at.Diagnosis,
+# and change axis labels
+ggplot(data=dat2, aes(x=Sex, y=Age.at.Diagnosis)) +
+    geom_line(aes(group=1))+expand_limits(y=0) +
+    xlab(&quot;Gender of patients&quot;) + ylab(&quot;Age at Diagnosis&quot;) +
+    ggtitle(&quot;Average age of diagnosis&quot;)</code></pre>
+<p><img src="figure/R-output.Rmd/unnamed-chunk-35-1.png" width="672" style="display: block; margin: auto;" /></p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -1420,23 +1507,24 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] ggplot2_3.3.5
+[1] ggplot2_3.3.5   workflowr_1.7.0
 
 loaded via a namespace (and not attached):
- [1] Rcpp_1.0.8.3     pillar_1.7.0     compiler_4.1.3   bslib_0.3.1     
- [5] later_1.3.0      jquerylib_0.1.4  git2r_0.30.1     highr_0.9       
- [9] workflowr_1.7.0  tools_4.1.3      digest_0.6.29    gtable_0.3.0    
-[13] jsonlite_1.8.0   evaluate_0.15    lifecycle_1.0.1  tibble_3.1.6    
-[17] pkgconfig_2.0.3  rlang_1.0.2      cli_3.2.0        rstudioapi_0.13 
-[21] yaml_2.3.5       xfun_0.30        fastmap_1.1.0    withr_2.5.0     
-[25] dplyr_1.0.8      stringr_1.4.0    knitr_1.40       generics_0.1.2  
-[29] fs_1.5.2         vctrs_0.4.0      sass_0.4.1       tidyselect_1.1.2
-[33] grid_4.1.3       rprojroot_2.0.3  glue_1.6.2       R6_2.5.1        
-[37] fansi_1.0.3      rmarkdown_2.13   farver_2.1.0     purrr_0.3.4     
-[41] magrittr_2.0.3   whisker_0.4      scales_1.1.1     promises_1.2.0.1
-[45] ellipsis_0.3.2   htmltools_0.5.2  colorspace_2.0-3 httpuv_1.6.5    
-[49] labeling_0.4.2   utf8_1.2.2       stringi_1.7.6    munsell_0.5.0   
-[53] crayon_1.5.1    </code></pre>
+ [1] tidyselect_1.1.2 xfun_0.30        bslib_0.3.1      purrr_0.3.4     
+ [5] colorspace_2.0-3 vctrs_0.4.0      generics_0.1.2   htmltools_0.5.2 
+ [9] yaml_2.3.5       utf8_1.2.2       rlang_1.0.2      jquerylib_0.1.4 
+[13] later_1.3.0      pillar_1.7.0     glue_1.6.2       withr_2.5.0     
+[17] lifecycle_1.0.1  stringr_1.4.0    munsell_0.5.0    gtable_0.3.0    
+[21] evaluate_0.15    labeling_0.4.2   knitr_1.40       callr_3.7.0     
+[25] fastmap_1.1.0    httpuv_1.6.5     ps_1.6.0         fansi_1.0.3     
+[29] highr_0.9        Rcpp_1.0.8.3     promises_1.2.0.1 scales_1.1.1    
+[33] jsonlite_1.8.0   farver_2.1.0     fs_1.5.2         digest_0.6.29   
+[37] stringi_1.7.6    processx_3.5.3   dplyr_1.0.8      getPass_0.2-2   
+[41] rprojroot_2.0.3  grid_4.1.3       cli_3.2.0        tools_4.1.3     
+[45] magrittr_2.0.3   sass_0.4.1       tibble_3.1.6     crayon_1.5.1    
+[49] whisker_0.4      pkgconfig_2.0.3  ellipsis_0.3.2   rmarkdown_2.13  
+[53] httr_1.4.2       rstudioapi_0.13  R6_2.5.1         git2r_0.30.1    
+[57] compiler_4.1.3  </code></pre>
 </div>
 </div>
 
