@@ -574,15 +574,15 @@ data/mixed_impact_subset_2022/data_mutations.txt
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomAkhileshpandey87myprojecttreeba427351f63aaa0a4e2b85a80123af6321b2522ftargetblankba42735a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomAkhileshpandey87myprojecttree576f7cf57eec0a0e77972d148fbb66b0c636d216targetblank576f7cfa">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/Akhileshpandey87/myproject/tree/ba427351f63aaa0a4e2b85a80123af6321b2522f" target="_blank">ba42735</a>
+<a href="https://github.com/Akhileshpandey87/myproject/tree/576f7cf57eec0a0e77972d148fbb66b0c636d216" target="_blank">576f7cf</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomAkhileshpandey87myprojecttreeba427351f63aaa0a4e2b85a80123af6321b2522ftargetblankba42735a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomAkhileshpandey87myprojecttree576f7cf57eec0a0e77972d148fbb66b0c636d216targetblank576f7cfa"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -592,7 +592,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/Akhileshpandey87/myproject/tree/ba427351f63aaa0a4e2b85a80123af6321b2522f" target="_blank">ba42735</a>.
+<a href="https://github.com/Akhileshpandey87/myproject/tree/576f7cf57eec0a0e77972d148fbb66b0c636d216" target="_blank">576f7cf</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -664,6 +664,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/Akhileshpandey87/myproject/blob/576f7cf57eec0a0e77972d148fbb66b0c636d216/analysis/msk_impact_result.Rmd" target="_blank">576f7cf</a>
+</td>
+<td>
+Akhilesh
+</td>
+<td>
+2022-11-14
+</td>
+<td>
+wflow_publish("analysis/msk_impact_result.Rmd")
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/Akhileshpandey87/myproject/ba67e472d28ca6c3677b15320c1bf129b632d636/docs/msk_impact_result.html" target="_blank">ba67e47</a>
+</td>
+<td>
+Akhilesh
+</td>
+<td>
+2022-11-14
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1097,16 +1131,15 @@ Non-Small Cell Lung Cancer             Ovarian Cancer
 data &lt;- data.frame(table(mskdat_s$CANCER_TYPE))
 # relative frequency
 num_obsrv &lt;- sum(table(mskdat_s$CANCER_TYPE))
-freq&lt;-data/num_obsrv</code></pre>
-<pre><code>Warning in Ops.factor(left, right): &#39;/&#39; not meaningful for factors</code></pre>
-<pre class="r"><code>data_frame &lt;- data.frame(data, freq[,2])
-colnames(data_frame) &lt;- c(&quot;data&quot;,&quot;#&quot;,&quot;freq&quot;)
+freq&lt;-data[,2]/num_obsrv
+data_frame &lt;- data.frame(data, freq)
+colnames(data_frame) &lt;- c(&quot;CANCER TYPE&quot;,&quot;#&quot;,&quot;freq&quot;)
 # order in descending by frequency
 data_frame&lt;-data_frame[order(data_frame$freq,decreasing = TRUE),]
 #converting frequency in percentage with accuracy at 2 decimal place 
 data_frame$freq &lt;- percent(data_frame$freq, accuracy=.01)
 print (data_frame)</code></pre>
-<pre><code>                         data  #   freq
+<pre><code>                  CANCER TYPE  #   freq
 9  Non-Small Cell Lung Cancer 36 52.17%
 6                      Glioma  5  7.25%
 12       Renal Cell Carcinoma  5  7.25%
@@ -1174,103 +1207,15 @@ Uterine Serous Carcinoma/Uterine Papillary Serous Carcinoma
 data &lt;- data.frame(table(mskdat_s$CANCER_TYPE_DETAILED))
 # relative frequency
 num_obsrv &lt;- sum(table(mskdat_s$CANCER_TYPE_DETAILED))
-freq&lt;-data/num_obsrv</code></pre>
-<pre><code>Warning in Ops.factor(left, right): &#39;/&#39; not meaningful for factors</code></pre>
-<pre class="r"><code>data_frame &lt;- data.frame(data, freq[,2])
-colnames(data_frame) &lt;- c(&quot;data&quot;,&quot;#&quot;,&quot;freq&quot;)
+freq&lt;-data[,2]/num_obsrv
+data_frame &lt;- data.frame(data, freq)
+colnames(data_frame) &lt;- c(&quot;CANCER TYPE DETAILED&quot;,&quot;#&quot;,&quot;freq&quot;)
 # order in descending by frequency
 data_frame&lt;-data_frame[order(data_frame$freq,decreasing = TRUE),]
 #converting frequency in percentage with accuracy at 2 decimal place 
 data_frame$freq &lt;- percent(data_frame$freq, accuracy=.01)
 print (data_frame)</code></pre>
-<pre><code>                                                          data  #   freq
-11                                         Lung Adenocarcinoma 31 44.93%
-20                                      Small Cell Lung Cancer  5  7.25%
-7                                      Glioblastoma Multiforme  3  4.35%
-19                                  Renal Clear Cell Carcinoma  3  4.35%
-21                                      Stomach Adenocarcinoma  3  4.35%
-2                                         Colon Adenocarcinoma  2  2.90%
-3                                           Cutaneous Melanoma  2  2.90%
-8                                       High-Grade Glioma, NOS  2  2.90%
-14                                  Non-Small Cell Lung Cancer  2  2.90%
-17                           Pleomorphic Carcinoma of the Lung  2  2.90%
-22 Uterine Serous Carcinoma/Uterine Papillary Serous Carcinoma  2  2.90%
-1                                          Adenocarcinoma, NOS  1  1.45%
-4                                        Endometrial Carcinoma  1  1.45%
-5                                    Esophageal Adenocarcinoma  1  1.45%
-6                              Extrahepatic Cholangiocarcinoma  1  1.45%
-9                             High-Grade Serous Ovarian Cancer  1  1.45%
-10                             Intrahepatic Cholangiocarcinoma  1  1.45%
-12                                   Lung Neuroendocrine Tumor  1  1.45%
-13                                       Mixed Germ Cell Tumor  1  1.45%
-15                                   Pancreatic Adenocarcinoma  1  1.45%
-16                              Papillary Renal Cell Carcinoma  1  1.45%
-18                                        Renal Cell Carcinoma  1  1.45%
-23                                              Yolk Sac Tumor  1  1.45%</code></pre>
-<pre class="r"><code>#frequency Distribution of CANCER TYPE DETAILED
-library(scales)
-table(mskdat_s$CANCER_TYPE_DETAILED)</code></pre>
-<pre><code>
-                                        Adenocarcinoma, NOS 
-                                                          1 
-                                       Colon Adenocarcinoma 
-                                                          2 
-                                         Cutaneous Melanoma 
-                                                          2 
-                                      Endometrial Carcinoma 
-                                                          1 
-                                  Esophageal Adenocarcinoma 
-                                                          1 
-                            Extrahepatic Cholangiocarcinoma 
-                                                          1 
-                                    Glioblastoma Multiforme 
-                                                          3 
-                                     High-Grade Glioma, NOS 
-                                                          2 
-                           High-Grade Serous Ovarian Cancer 
-                                                          1 
-                            Intrahepatic Cholangiocarcinoma 
-                                                          1 
-                                        Lung Adenocarcinoma 
-                                                         31 
-                                  Lung Neuroendocrine Tumor 
-                                                          1 
-                                      Mixed Germ Cell Tumor 
-                                                          1 
-                                 Non-Small Cell Lung Cancer 
-                                                          2 
-                                  Pancreatic Adenocarcinoma 
-                                                          1 
-                             Papillary Renal Cell Carcinoma 
-                                                          1 
-                          Pleomorphic Carcinoma of the Lung 
-                                                          2 
-                                       Renal Cell Carcinoma 
-                                                          1 
-                                 Renal Clear Cell Carcinoma 
-                                                          3 
-                                     Small Cell Lung Cancer 
-                                                          5 
-                                     Stomach Adenocarcinoma 
-                                                          3 
-Uterine Serous Carcinoma/Uterine Papillary Serous Carcinoma 
-                                                          2 
-                                             Yolk Sac Tumor 
-                                                          1 </code></pre>
-<pre class="r"><code># generating frequency table
-data &lt;- data.frame(table(mskdat_s$CANCER_TYPE_DETAILED))
-# relative frequency
-num_obsrv &lt;- sum(table(mskdat_s$CANCER_TYPE_DETAILED))
-freq&lt;-data/num_obsrv</code></pre>
-<pre><code>Warning in Ops.factor(left, right): &#39;/&#39; not meaningful for factors</code></pre>
-<pre class="r"><code>data_frame &lt;- data.frame(data, freq[,2])
-colnames(data_frame) &lt;- c(&quot;data&quot;,&quot;#&quot;,&quot;freq&quot;)
-# order in descending by frequency
-data_frame&lt;-data_frame[order(data_frame$freq,decreasing = TRUE),]
-#converting frequency in percentage with accuracy at 2 decimal place 
-data_frame$freq &lt;- percent(data_frame$freq, accuracy=.01)
-print (data_frame)</code></pre>
-<pre><code>                                                          data  #   freq
+<pre><code>                                          CANCER TYPE DETAILED  #   freq
 11                                         Lung Adenocarcinoma 31 44.93%
 20                                      Small Cell Lung Cancer  5  7.25%
 7                                      Glioblastoma Multiforme  3  4.35%
