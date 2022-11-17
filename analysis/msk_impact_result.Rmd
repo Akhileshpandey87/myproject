@@ -26,6 +26,10 @@ head(mskdat_cna)
 mskdat_m <- read.delim ("~/Desktop/myproject/data/mixed_impact_subset_2022/data_mutations.txt",header=TRUE,stringsAsFactor = TRUE,comment.char = "#")
 head(mskdat_m)
 ```
+```{r}
+mskdat_cd <- read.delim ("~/Desktop/myproject/data/mixed_impact_subset_2022_clinical_data.txt",header=TRUE,stringsAsFactor = TRUE,comment.char = "#")
+head(mskdat_cd)
+```
 
 
 ```{r}
@@ -64,4 +68,60 @@ data_frame<-data_frame[order(data_frame$freq,decreasing = TRUE),]
 data_frame$freq <- percent(data_frame$freq, accuracy=.01)
 print (data_frame)
 ```
+
+```{r}
+#frequency Distribution of Mutated genes
+library(scales)
+table(mskdat_m$Hugo_Symbol)
+# generating frequency table
+data <- data.frame(table(mskdat_m$Hugo_Symbol))
+# relative frequency
+num_obsrv <- 69
+freq<-data[,2]/num_obsrv
+data_frame <- data.frame(data, freq)
+colnames(data_frame) <- c("Mutated genes","#","freq")
+# order in descending by frequency
+data_frame<-data_frame[order(data_frame$freq,decreasing = TRUE),]
+#converting frequency in percentage with accuracy at 2 decimal place 
+data_frame$freq <- percent(data_frame$freq, accuracy=.01)
+print (data_frame)
+```
+```{r}
+#frequency Distribution of Mutated genes
+library(scales)
+table(mskdat_m$Hugo_Symbol)
+# generating frequency table
+data <- data.frame(table(mskdat_m$Hugo_Symbol))
+# relative frequency
+num_obsrv <- 69
+freq<-data[,2]/num_obsrv
+data_frame <- data.frame(data, freq)
+colnames(data_frame) <- c("Mutated genes","#","freq")
+# order in descending by frequency
+data_frame<-data_frame[order(data_frame$freq,decreasing = TRUE),]
+#converting frequency in percentage with accuracy at 2 decimal place 
+data_frame$freq <- percent(data_frame$freq, accuracy=.01)
+print (data_frame)
+```
+
+
+```{r}
+library(ggplot2)
+library(ggpubr)
+mskdat_cd$Sample <- seq.int(nrow(mskdat_cd))
+ggplot(data = mskdat_cd, aes(x =Fraction.Genome.Altered, y = Mutation.Count,color=Sample,na.rm = TRUE)) + 
+  geom_point(size=2, shape=20,na.rm = TRUE) + stat_cor(method = "pearson",label.sep=" Pearson Correlation Coef.,",cor.coef.name = "R",na.rm = TRUE)+
+  scale_y_continuous(breaks = seq(0, 37, by = 5)) +scale_x_continuous(breaks = seq(0, 1, by = .1))+
+  labs(title = "Mutation Count Vs Fraction Genome Altered ", x = "Fraction Genome Altered", y = "Mutation Count")
+```
+```{r}
+library(ggplot2)
+library(ggpubr)
+mskdat_cd$Sample <- seq.int(nrow(mskdat_cd))
+ggplot(data = mskdat_cd, aes(x =Fraction.Genome.Altered, y = Mutation.Count,color=Sample,na.rm = TRUE)) + 
+  geom_point(size=2, shape=20,na.rm = TRUE) + stat_cor(method = "spearman",label.sep=" Spearman Correlation Coef.,", cor.coef.name ="rho",na.rm = TRUE)+
+  scale_y_continuous(breaks = seq(0, 37, by = 5)) +scale_x_continuous(breaks = seq(0, 1, by = .1))+
+  labs(title = "Mutation Count Vs Fraction Genome Altered ", x = "Fraction Genome Altered", y = "Mutation Count")
+```
+
 
