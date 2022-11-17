@@ -125,3 +125,19 @@ ggplot(data = mskdat_cd, aes(x =Fraction.Genome.Altered, y = Mutation.Count,colo
 ```
 
 
+```{r}
+
+library(ggplot2)
+mskdat_cd %>% 
+  mutate(Mutation_Count = ifelse(Mutation.Count > 14, 14, ifelse(Mutation.Count <= 2, 2, Mutation.Count))) %>% 
+ggplot(aes(Mutation_Count)) + 
+  geom_histogram(binwidth =1,col = "black",fill="blue")+scale_y_continuous(breaks = seq(2, 12, by = 2)) +scale_x_continuous(breaks = seq(2, 15, by = 1))+ labs(title = "Mutation Count")
+```
+
+
+
+```{r}
+library(ggplot2)
+mskdat_sample_type<-data.frame(table(mskdat_s$SAMPLE_TYPE))
+ggplot(mskdat_sample_type,x="",y=mskdat_sample_type[2])+geom_bar(stat="identity", width=1) +
+  coord_polar("y", start=0)
