@@ -582,15 +582,15 @@ data/mixed_impact_subset_2022_clinical_data.txt
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomAkhileshpandey87myprojecttreea556d9303b84391aa7f628194d81eb065c4a91cetargetblanka556d93a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomAkhileshpandey87myprojecttree8729a608fd75c877805af691918d387a74ccc683targetblank8729a60a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/Akhileshpandey87/myproject/tree/a556d9303b84391aa7f628194d81eb065c4a91ce" target="_blank">a556d93</a>
+<a href="https://github.com/Akhileshpandey87/myproject/tree/8729a608fd75c877805af691918d387a74ccc683" target="_blank">8729a60</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomAkhileshpandey87myprojecttreea556d9303b84391aa7f628194d81eb065c4a91cetargetblanka556d93a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomAkhileshpandey87myprojecttree8729a608fd75c877805af691918d387a74ccc683targetblank8729a60a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -600,7 +600,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/Akhileshpandey87/myproject/tree/a556d9303b84391aa7f628194d81eb065c4a91ce" target="_blank">a556d93</a>.
+<a href="https://github.com/Akhileshpandey87/myproject/tree/8729a608fd75c877805af691918d387a74ccc683" target="_blank">8729a60</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -673,6 +673,57 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/Akhileshpandey87/myproject/blob/8729a608fd75c877805af691918d387a74ccc683/analysis/msk_impact_result.Rmd" target="_blank">8729a60</a>
+</td>
+<td>
+Akhilesh
+</td>
+<td>
+2022-11-17
+</td>
+<td>
+wflow_publish("analysis/msk_impact_result.Rmd")
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/Akhileshpandey87/myproject/blob/36c85d99b61df06765920c48a377bd1d5db1e859/analysis/msk_impact_result.Rmd" target="_blank">36c85d9</a>
+</td>
+<td>
+Akhilesh
+</td>
+<td>
+2022-11-17
+</td>
+<td>
+wflow_git_commit("analysis/msk_impact_result.Rmd")
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/Akhileshpandey87/myproject/7ed2bede91871403103b73d43d8f14b5695c3787/docs/msk_impact_result.html" target="_blank">7ed2bed</a>
+</td>
+<td>
+Akhilesh
+</td>
+<td>
+2022-11-17
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1956,6 +2007,13 @@ i This can happen when ggplot fails to infer the correct grouping structure in
 i Did you forget to specify a `group` aesthetic or to convert a numerical
   variable into a factor?</code></pre>
 <p><img src="figure/msk_impact_result.Rmd/unnamed-chunk-11-1.png" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>library(ggplot2)
+mskdat_cd %&gt;% 
+  mutate(Mutation_Count = ifelse(Mutation.Count &gt; 14, 14, ifelse(Mutation.Count &lt;= 2, 2, Mutation.Count))) %&gt;% 
+ggplot(aes(Mutation_Count)) + 
+  geom_histogram(binwidth =1,col = &quot;black&quot;,fill=&quot;blue&quot;)+scale_y_continuous(breaks = seq(2, 12, by = 2)) +scale_x_continuous(breaks = seq(2, 15, by = 1))+ labs(title = &quot;Mutation Count&quot;)</code></pre>
+<pre><code>Warning: Removed 3 rows containing non-finite values (`stat_bin()`).</code></pre>
+<p><img src="figure/msk_impact_result.Rmd/unnamed-chunk-12-1.png" width="672" style="display: block; margin: auto;" /></p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -1988,19 +2046,20 @@ loaded via a namespace (and not attached):
  [1] tidyselect_1.1.2 xfun_0.30        bslib_0.3.1      purrr_0.3.4     
  [5] carData_3.0-5    colorspace_2.0-3 vctrs_0.5.1      generics_0.1.2  
  [9] htmltools_0.5.2  yaml_2.3.5       utf8_1.2.2       rlang_1.0.6     
-[13] jquerylib_0.1.4  later_1.3.0      pillar_1.7.0     glue_1.6.2      
-[17] withr_2.5.0      lifecycle_1.0.3  stringr_1.4.0    munsell_0.5.0   
-[21] ggsignif_0.6.4   gtable_0.3.0     evaluate_0.15    labeling_0.4.2  
-[25] knitr_1.40       callr_3.7.0      fastmap_1.1.0    httpuv_1.6.5    
-[29] ps_1.6.0         fansi_1.0.3      highr_0.9        broom_0.7.12    
-[33] Rcpp_1.0.8.3     backports_1.4.1  promises_1.2.0.1 jsonlite_1.8.0  
-[37] abind_1.4-5      farver_2.1.0     fs_1.5.2         digest_0.6.29   
-[41] stringi_1.7.6    rstatix_0.7.1    processx_3.5.3   dplyr_1.0.8     
-[45] getPass_0.2-2    rprojroot_2.0.3  grid_4.1.3       cli_3.4.1       
-[49] tools_4.1.3      magrittr_2.0.3   sass_0.4.1       tibble_3.1.6    
-[53] car_3.1-1        tidyr_1.2.0      crayon_1.5.1     whisker_0.4     
-[57] pkgconfig_2.0.3  ellipsis_0.3.2   rmarkdown_2.13   httr_1.4.2      
-[61] rstudioapi_0.13  R6_2.5.1         git2r_0.30.1     compiler_4.1.3  </code></pre>
+[13] jquerylib_0.1.4  later_1.3.0      pillar_1.7.0     withr_2.5.0     
+[17] glue_1.6.2       DBI_1.1.3        lifecycle_1.0.3  stringr_1.4.0   
+[21] ggsignif_0.6.4   munsell_0.5.0    gtable_0.3.0     evaluate_0.15   
+[25] labeling_0.4.2   knitr_1.40       callr_3.7.0      fastmap_1.1.0   
+[29] httpuv_1.6.5     ps_1.6.0         fansi_1.0.3      highr_0.9       
+[33] broom_0.7.12     Rcpp_1.0.8.3     backports_1.4.1  promises_1.2.0.1
+[37] jsonlite_1.8.0   abind_1.4-5      farver_2.1.0     fs_1.5.2        
+[41] digest_0.6.29    stringi_1.7.6    rstatix_0.7.1    processx_3.5.3  
+[45] dplyr_1.0.10     getPass_0.2-2    rprojroot_2.0.3  grid_4.1.3      
+[49] cli_3.4.1        tools_4.1.3      magrittr_2.0.3   sass_0.4.1      
+[53] tibble_3.1.6     car_3.1-1        tidyr_1.2.0      crayon_1.5.1    
+[57] whisker_0.4      pkgconfig_2.0.3  ellipsis_0.3.2   assertthat_0.2.1
+[61] rmarkdown_2.13   httr_1.4.2       rstudioapi_0.13  R6_2.5.1        
+[65] git2r_0.30.1     compiler_4.1.3  </code></pre>
 </div>
 
 
