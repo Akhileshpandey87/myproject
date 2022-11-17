@@ -135,9 +135,3 @@ ggplot(aes(Mutation_Count)) +
 ```
 
 
-
-```{r}
-library(ggplot2)
-mskdat_sample_type<-data.frame(table(mskdat_s$SAMPLE_TYPE))
-ggplot(mskdat_sample_type,x="",y=mskdat_sample_type[2])+geom_bar(stat="identity", width=1) +
-  coord_polar("y", start=0)
