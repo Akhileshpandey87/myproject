@@ -393,7 +393,7 @@ aria-hidden="true"></span> </a>
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2022-11-14
+<strong>Last updated:</strong> 2022-11-17
 </p>
 <p>
 <strong>Checks:</strong> <span
@@ -566,6 +566,14 @@ data/mixed_impact_subset_2022/data_cna.txt
 data/mixed_impact_subset_2022/data_mutations.txt
 </td>
 </tr>
+<tr>
+<td style="text-align:left;">
+~/Desktop/myproject/data/mixed_impact_subset_2022_clinical_data.txt
+</td>
+<td style="text-align:left;">
+data/mixed_impact_subset_2022_clinical_data.txt
+</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -574,15 +582,15 @@ data/mixed_impact_subset_2022/data_mutations.txt
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomAkhileshpandey87myprojecttree576f7cf57eec0a0e77972d148fbb66b0c636d216targetblank576f7cfa">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomAkhileshpandey87myprojecttreea556d9303b84391aa7f628194d81eb065c4a91cetargetblanka556d93a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/Akhileshpandey87/myproject/tree/576f7cf57eec0a0e77972d148fbb66b0c636d216" target="_blank">576f7cf</a>
+<a href="https://github.com/Akhileshpandey87/myproject/tree/a556d9303b84391aa7f628194d81eb065c4a91ce" target="_blank">a556d93</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomAkhileshpandey87myprojecttree576f7cf57eec0a0e77972d148fbb66b0c636d216targetblank576f7cfa"
+id="strongRepositoryversionstrongahrefhttpsgithubcomAkhileshpandey87myprojecttreea556d9303b84391aa7f628194d81eb065c4a91cetargetblanka556d93a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -592,7 +600,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/Akhileshpandey87/myproject/tree/576f7cf57eec0a0e77972d148fbb66b0c636d216" target="_blank">576f7cf</a>.
+<a href="https://github.com/Akhileshpandey87/myproject/tree/a556d9303b84391aa7f628194d81eb065c4a91ce" target="_blank">a556d93</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -613,6 +621,7 @@ Ignored files:
 
 Untracked files:
     Untracked:  data/mixed_impact_subset_2022/
+    Untracked:  data/mixed_impact_subset_2022_clinical_data.txt
     Untracked:  data/pancan_pcawg_2020/
     Untracked:  data/pancan_pcawg_2020_clinical_data.txt
     Untracked:  site_libs/
@@ -664,6 +673,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/Akhileshpandey87/myproject/blob/a556d9303b84391aa7f628194d81eb065c4a91ce/analysis/msk_impact_result.Rmd" target="_blank">a556d93</a>
+</td>
+<td>
+Akhilesh
+</td>
+<td>
+2022-11-17
+</td>
+<td>
+wflow_publish("analysis/msk_impact_result.Rmd")
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/Akhileshpandey87/myproject/59a382bfd5234b47b7f2a95955b3b5cdbc1b1d67/docs/msk_impact_result.html" target="_blank">59a382b</a>
+</td>
+<td>
+Akhilesh
+</td>
+<td>
+2022-11-14
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1109,6 +1152,148 @@ head(mskdat_m)</code></pre>
 4      NA         NA
 5      NA         NA
 6      NA         NA</code></pre>
+<pre class="r"><code>mskdat_cd &lt;- read.delim (&quot;~/Desktop/myproject/data/mixed_impact_subset_2022_clinical_data.txt&quot;,header=TRUE,stringsAsFactor = TRUE,comment.char = &quot;#&quot;)
+head(mskdat_cd)</code></pre>
+<pre><code>                  Study.ID Patient.ID         Sample.ID Diagnosis.Age
+1 mixed_impact_subset_2022  P-0000112 P-0000112-T01-IM3            NA
+2 mixed_impact_subset_2022  P-0000113 P-0000113-T01-IM3            NA
+3 mixed_impact_subset_2022  P-0000133 P-0000133-T01-IM3            NA
+4 mixed_impact_subset_2022  P-0000190 P-0000190-T01-IM3            NA
+5 mixed_impact_subset_2022  P-0000208 P-0000208-T01-IM3            NA
+6 mixed_impact_subset_2022  P-0000219 P-0000219-T01-IM3            NA
+  Age.at.Which.Sequencing.was.Reported..Years. Patient.Current.Age Archer.Panel
+1                                           NA                  NA           NO
+2                                           60                  68           NO
+3                                           82                  83           NO
+4                                           49                  50           NO
+5                                           69                  69           NO
+6                                           55                  63           NO
+                 Cancer.Type      Cancer.Type.Detailed CRDB_ADJ_TXT
+1     Esophagogastric Cancer Esophageal Adenocarcinoma         &lt;NA&gt;
+2     Small Cell Lung Cancer    Small Cell Lung Cancer         &lt;NA&gt;
+3 Non-Small Cell Lung Cancer       Lung Adenocarcinoma         &lt;NA&gt;
+4     Small Cell Lung Cancer    Small Cell Lung Cancer         &lt;NA&gt;
+5 Non-Small Cell Lung Cancer       Lung Adenocarcinoma         &lt;NA&gt;
+6 Non-Small Cell Lung Cancer       Lung Adenocarcinoma         &lt;NA&gt;
+  CRDB_BASIC_COMMENTS CRDB_BRAINMET CRDB_CONSENT_DATE_DAYS CRDB_ECOG
+1                  NA          &lt;NA&gt;                     NA        NA
+2                  NA          &lt;NA&gt;                  21788        NA
+3                  NA          &lt;NA&gt;                  29793        NA
+4                  NA          &lt;NA&gt;                  17840        NA
+5                  NA          &lt;NA&gt;                  24948        NA
+6                  NA          &lt;NA&gt;                  20058        NA
+  CRDB_NOSYSTXT CRDB_OFF_STUDY_DAYS CRDB_PRIOR_RX CRDB_SURVEY_COMMENTS
+1            NA                  NA          &lt;NA&gt;                   NA
+2            NA                  NA          &lt;NA&gt;                   NA
+3            NA                  NA          &lt;NA&gt;                   NA
+4            NA                  NA          &lt;NA&gt;                   NA
+5            NA               25378          &lt;NA&gt;                   NA
+6            NA                  NA          &lt;NA&gt;                   NA
+  CRDB_SURVIVAL_STATUS CRDB_TREATMENT_END_DAYS
+1                 &lt;NA&gt;                      NA
+2                Alive                      NA
+3                 Dead                   30399
+4                 Dead                   18314
+5                 Dead                   25378
+6                Alive                      NA
+  Impact.TMB.Percentile..Across.All.Tumor.Types. Impact.TMB.Score
+1                                           84.5              8.9
+2                                           94.2             20.1
+3                                           58.6              4.5
+4                                           85.0              8.9
+5                                           29.9              2.2
+6                                           58.6              4.5
+  Impact.TMB.Percentile..Within.Tumor.Type. Date.added.to.cBioPortal
+1                                      86.1               2015/04/07
+2                                      96.8               2015/04/07
+3                                      42.2               2015/04/07
+4                                      57.9               2015/04/07
+5                                      19.9               2015/04/07
+6                                      42.2               2015/04/07
+  Disease.Free..Months. Disease.Free.Status        Ethnicity.Category
+1                    NA                &lt;NA&gt;                      &lt;NA&gt;
+2                    NA                &lt;NA&gt; Non-Spanish; Non-Hispanic
+3                    NA                &lt;NA&gt; Non-Spanish; Non-Hispanic
+4                    NA                &lt;NA&gt; Non-Spanish; Non-Hispanic
+5                    NA                &lt;NA&gt; Non-Spanish; Non-Hispanic
+6                    NA                &lt;NA&gt; Non-Spanish; Non-Hispanic
+  Fraction.Genome.Altered Gene.Panel Neoplasm.Histologic.Type.Name
+1                  0.3580  IMPACT341                          &lt;NA&gt;
+2                  0.3740  IMPACT341                          &lt;NA&gt;
+3                  0.0026  IMPACT341                          &lt;NA&gt;
+4                  0.4202  IMPACT341                          &lt;NA&gt;
+5                  0.1173  IMPACT341                          &lt;NA&gt;
+6                  0.0001  IMPACT341                          &lt;NA&gt;
+  Institute.Source Metastatic.Site MGMT.Status Month.added.to.cBioPortal
+1            MSKCC            &lt;NA&gt;        &lt;NA&gt;                   2015/04
+2            MSKCC            &lt;NA&gt;        &lt;NA&gt;                   2015/04
+3            MSKCC            &lt;NA&gt;        &lt;NA&gt;                   2015/04
+4            MSKCC           Brain        &lt;NA&gt;                   2015/04
+5            MSKCC            &lt;NA&gt;        &lt;NA&gt;                   2015/04
+6            MSKCC            &lt;NA&gt;        &lt;NA&gt;                   2015/04
+                                       MSI.Comment MSI.Score MSI.Type
+1 MICROSATELLITE STABLE (MSS). See MSI note below.      2.76   Stable
+2                                             &lt;NA&gt;      1.08   Stable
+3                                             &lt;NA&gt;      0.00   Stable
+4                                             &lt;NA&gt;      2.02   Stable
+5                                             &lt;NA&gt;      0.00   Stable
+6                                             &lt;NA&gt;      0.08   Stable
+  MSK.Slide.ID Mutation.Count Oncotree.Code Overall.Survival..Months.
+1       739966              8          ESCA                        NA
+2           NA             18          SCLC                   100.570
+3       466714              4          LUAD                    18.904
+4           NA              8          SCLC                    14.367
+5           NA              2          LUAD                    12.855
+6       468429              4          LUAD                    99.518
+  Overall.Survival.Months.Reported.by.DMT Overall.Survival.Status
+1                                      NA                    &lt;NA&gt;
+2                                      NA                0:LIVING
+3                                      NA              1:DECEASED
+4                                      NA              1:DECEASED
+5                                      NA              1:DECEASED
+6                                      NA                0:LIVING
+  Overall.Status.Reported.by.DMT Other.Patient.ID X12.245.Part.A.Consented
+1                           &lt;NA&gt;          DMP0096                       NO
+2                           &lt;NA&gt;          DMP0101                      YES
+3                           &lt;NA&gt;          DMP0116                      YES
+4                           &lt;NA&gt;          DMP0178                      YES
+5                           &lt;NA&gt;          DMP0193                      YES
+6                           &lt;NA&gt;          DMP0192                      YES
+  X12.245.Part.C.Consented MSK.Pathology.Slide.Available
+1                       NO                           YES
+2                       NO                            NO
+3                       NO                           YES
+4                       NO                            NO
+5                       NO                            NO
+6                       NO                           YES
+  Pediatric.Case.Indicator Primary.Tumor.Site Race.Category Religion
+1                     &lt;NA&gt;          Esophagus          &lt;NA&gt;     &lt;NA&gt;
+2                       No               Lung         WHITE   JEWISH
+3                       No               Lung         WHITE   JEWISH
+4                       No               Lung         WHITE   JEWISH
+5                       No               Lung         WHITE   JEWISH
+6                       No               Lung         WHITE   JEWISH
+  Sample.Class Number.of.Samples.Per.Patient Sample.coverage Sample.Type    Sex
+1        Tumor                             1             743     Primary   &lt;NA&gt;
+2        Tumor                             1             635     Primary Female
+3        Tumor                             1             529     Primary Female
+4        Tumor                             1            1216  Metastasis Female
+5        Tumor                             1            1346     Primary Female
+6        Tumor                             1            1033     Primary Female
+  Sex.Reported.by.DMT Somatic.Status SO.comments TMB..nonsynonymous.
+1                &lt;NA&gt;        Matched        &lt;NA&gt;            8.873242
+2                &lt;NA&gt;        Matched        &lt;NA&gt;           19.964795
+3                &lt;NA&gt;        Matched        &lt;NA&gt;            4.436621
+4                &lt;NA&gt;        Matched        &lt;NA&gt;            8.873242
+5                &lt;NA&gt;        Matched        &lt;NA&gt;            2.218311
+6                &lt;NA&gt;        Matched        &lt;NA&gt;            4.436621
+  Tumor.Purity Week.added.to.cBioPortal WHO.Grade
+1           NA             2015, Wk. 15      &lt;NA&gt;
+2           80             2015, Wk. 15      &lt;NA&gt;
+3           30             2015, Wk. 15      &lt;NA&gt;
+4           90             2015, Wk. 15      &lt;NA&gt;
+5           70             2015, Wk. 15      &lt;NA&gt;
+6           70             2015, Wk. 15      &lt;NA&gt;</code></pre>
 <pre class="r"><code>#frequency Distribution of CANCER TYPE
 library(scales)
 table(mskdat_s$CANCER_TYPE)</code></pre>
@@ -1239,6 +1424,538 @@ print (data_frame)</code></pre>
 16                              Papillary Renal Cell Carcinoma  1  1.45%
 18                                        Renal Cell Carcinoma  1  1.45%
 23                                              Yolk Sac Tumor  1  1.45%</code></pre>
+<pre class="r"><code>#frequency Distribution of Mutated genes
+library(scales)
+table(mskdat_m$Hugo_Symbol)</code></pre>
+<pre><code>
+    ABL1  ANKRD11      APC       AR   ARID1A   ARID1B    ARID2    ASXL2 
+       2        1        4        1        1        1        4        2 
+     ATM      ATR     ATRX      AXL     BAP1     BCL2     BCOR      BLM 
+       4        1        3        1        1        1        2        1 
+    BRAF    BRCA1    BRCA2     BRD4    BRIP1      BTK     CALR   CARD11 
+       4        3        3        1        1        1        1        2 
+     CBL    CCND2    CD274    CDK12   CDKN1B    CENPA    CSDE1   CTNNB1 
+       1        2        1        1        1        2        1        3 
+    CUL3     CYLD     DDR2   DICER1    DOT1L     EGFR   EIF1AX     ELF3 
+       1        1        2        2        4       20        1        1 
+   EP300    EPAS1    EPHA3    EPHA5    EPHA7    EPHB1    ERBB2    ERBB4 
+       3        1        1        4        3        1        2        4 
+   ERCC3    ERCC4      ERG     ESR1     ETV6     FAT1    FBXW7    FGFR4 
+       2        1        1        1        2        3        1        2 
+  FIP1L1     FLT1     FLT3    FOXA1    FOXL2    FUBP1      FYN     GLI1 
+       1        3        2        1        1        1        3        1 
+  GRIN2A    GSK3B    H3F3A      HGF HIST1H1C    HLA-A   HOXB13     IDH1 
+       4        1        1        5        1        1        1        3 
+    IGF1    IGF1R    IKZF1     IL7R    INHBA   INPP4B     INSR     JAK2 
+       1        1        1        2        2        2        1        2 
+    JAK3    KDM5A    KDM5C      KDR    KEAP1      KIT     KLF4    KMT2B 
+       1        1        4        2        5        2        2        2 
+   KMT2C    KMT2D     KRAS    LATS1    LATS2     MDC1     MDM2      MET 
+       2        6        6        1        1        1        1       11 
+     MGA     MLH1      MLL     MLL3     MSH3    MST1R     MTOR      MYC 
+       3        1        1        2        2        2        3        1 
+    MYCN      NBN    NCOR1      NF1   NFE2L2   NOTCH1   NOTCH2   NOTCH3 
+       1        3        2        3        1        1        1        3 
+  NOTCH4     NPM1     NRAS     NSD1    NTRK1    NTRK2    NTRK3     PAK7 
+       2        2        1        1        2        1        5        2 
+    PAX5    PBRM1    PDCD1   PDGFRA   PDGFRB    PDPK1  PIK3C2G   PIK3C3 
+       1        5        1        3        2        1        2        1 
+  PIK3CA   PIK3CB   PIK3CD   PIK3CG   PIK3R1   PIK3R3     PMS2    POLD1 
+       6        1        1        2        1        3        1        2 
+    POLE    PPM1D  PPP2R1A    PREX2     PTEN   PTPN11    PTPRD    PTPRT 
+       4        1        2        2        3        1        6        4 
+    RAC2    RAD50    RASA1      RB1    RBM10   RECQL4      RET   RICTOR 
+       1        2        1       10        1        1        3        1 
+   RNF43     ROS1    RPTOR    RRAGC    RTEL1    SETD2    SF3B1     SLX4 
+       3        3        1        1        1        6        2        1 
+   SMAD4  SMARCA4      SMO     SOS1    SOX17     SOX2     SOX9     SPEN 
+       2        3        1        2        1        1        1        1 
+   STAG2   STAT5A    STK11    STK19      SYK     TAP1   TCF7L2      TEK 
+       2        1        1        2        2        1        1        1 
+    TERT     TET1     TET2     TOP1     TP53     TP63     TSC1     TSC2 
+      10        2        1        1       41        2        1        1 
+     VHL     XIAP    ZFHX3    ZRSR2 
+       1        1        4        2 </code></pre>
+<pre class="r"><code># generating frequency table
+data &lt;- data.frame(table(mskdat_m$Hugo_Symbol))
+# relative frequency
+num_obsrv &lt;- 69
+freq&lt;-data[,2]/num_obsrv
+data_frame &lt;- data.frame(data, freq)
+colnames(data_frame) &lt;- c(&quot;Mutated genes&quot;,&quot;#&quot;,&quot;freq&quot;)
+# order in descending by frequency
+data_frame&lt;-data_frame[order(data_frame$freq,decreasing = TRUE),]
+#converting frequency in percentage with accuracy at 2 decimal place 
+data_frame$freq &lt;- percent(data_frame$freq, accuracy=.01)
+print (data_frame)</code></pre>
+<pre><code>    Mutated genes  #   freq
+181          TP53 41 59.42%
+38           EGFR 20 28.99%
+96            MET 11 15.94%
+148           RB1 10 14.49%
+177          TERT 10 14.49%
+90          KMT2D  6  8.70%
+91           KRAS  6  8.70%
+129        PIK3CA  6  8.70%
+143         PTPRD  6  8.70%
+158         SETD2  6  8.70%
+68            HGF  5  7.25%
+85          KEAP1  5  7.25%
+119         NTRK3  5  7.25%
+122         PBRM1  5  7.25%
+3             APC  4  5.80%
+7           ARID2  4  5.80%
+9             ATM  4  5.80%
+17           BRAF  4  5.80%
+37          DOT1L  4  5.80%
+44          EPHA5  4  5.80%
+48          ERBB4  4  5.80%
+65         GRIN2A  4  5.80%
+83          KDM5C  4  5.80%
+137          POLE  4  5.80%
+144         PTPRT  4  5.80%
+187         ZFHX3  4  5.80%
+11           ATRX  3  4.35%
+18          BRCA1  3  4.35%
+19          BRCA2  3  4.35%
+32         CTNNB1  3  4.35%
+41          EP300  3  4.35%
+45          EPHA7  3  4.35%
+54           FAT1  3  4.35%
+58           FLT1  3  4.35%
+63            FYN  3  4.35%
+72           IDH1  3  4.35%
+97            MGA  3  4.35%
+103          MTOR  3  4.35%
+106           NBN  3  4.35%
+108           NF1  3  4.35%
+112        NOTCH3  3  4.35%
+124        PDGFRA  3  4.35%
+134        PIK3R3  3  4.35%
+141          PTEN  3  4.35%
+151           RET  3  4.35%
+153         RNF43  3  4.35%
+154          ROS1  3  4.35%
+162       SMARCA4  3  4.35%
+1            ABL1  2  2.90%
+8           ASXL2  2  2.90%
+15           BCOR  2  2.90%
+24         CARD11  2  2.90%
+26          CCND2  2  2.90%
+30          CENPA  2  2.90%
+35           DDR2  2  2.90%
+36         DICER1  2  2.90%
+47          ERBB2  2  2.90%
+49          ERCC3  2  2.90%
+53           ETV6  2  2.90%
+56          FGFR4  2  2.90%
+59           FLT3  2  2.90%
+76           IL7R  2  2.90%
+77          INHBA  2  2.90%
+78         INPP4B  2  2.90%
+80           JAK2  2  2.90%
+84            KDR  2  2.90%
+86            KIT  2  2.90%
+87           KLF4  2  2.90%
+88          KMT2B  2  2.90%
+89          KMT2C  2  2.90%
+100          MLL3  2  2.90%
+101          MSH3  2  2.90%
+102         MST1R  2  2.90%
+107         NCOR1  2  2.90%
+113        NOTCH4  2  2.90%
+114          NPM1  2  2.90%
+117         NTRK1  2  2.90%
+120          PAK7  2  2.90%
+125        PDGFRB  2  2.90%
+127       PIK3C2G  2  2.90%
+132        PIK3CG  2  2.90%
+136         POLD1  2  2.90%
+139       PPP2R1A  2  2.90%
+140         PREX2  2  2.90%
+146         RAD50  2  2.90%
+159         SF3B1  2  2.90%
+161         SMAD4  2  2.90%
+164          SOS1  2  2.90%
+169         STAG2  2  2.90%
+172         STK19  2  2.90%
+173           SYK  2  2.90%
+178          TET1  2  2.90%
+182          TP63  2  2.90%
+188         ZRSR2  2  2.90%
+2         ANKRD11  1  1.45%
+4              AR  1  1.45%
+5          ARID1A  1  1.45%
+6          ARID1B  1  1.45%
+10            ATR  1  1.45%
+12            AXL  1  1.45%
+13           BAP1  1  1.45%
+14           BCL2  1  1.45%
+16            BLM  1  1.45%
+20           BRD4  1  1.45%
+21          BRIP1  1  1.45%
+22            BTK  1  1.45%
+23           CALR  1  1.45%
+25            CBL  1  1.45%
+27          CD274  1  1.45%
+28          CDK12  1  1.45%
+29         CDKN1B  1  1.45%
+31          CSDE1  1  1.45%
+33           CUL3  1  1.45%
+34           CYLD  1  1.45%
+39         EIF1AX  1  1.45%
+40           ELF3  1  1.45%
+42          EPAS1  1  1.45%
+43          EPHA3  1  1.45%
+46          EPHB1  1  1.45%
+50          ERCC4  1  1.45%
+51            ERG  1  1.45%
+52           ESR1  1  1.45%
+55          FBXW7  1  1.45%
+57         FIP1L1  1  1.45%
+60          FOXA1  1  1.45%
+61          FOXL2  1  1.45%
+62          FUBP1  1  1.45%
+64           GLI1  1  1.45%
+66          GSK3B  1  1.45%
+67          H3F3A  1  1.45%
+69       HIST1H1C  1  1.45%
+70          HLA-A  1  1.45%
+71         HOXB13  1  1.45%
+73           IGF1  1  1.45%
+74          IGF1R  1  1.45%
+75          IKZF1  1  1.45%
+79           INSR  1  1.45%
+81           JAK3  1  1.45%
+82          KDM5A  1  1.45%
+92          LATS1  1  1.45%
+93          LATS2  1  1.45%
+94           MDC1  1  1.45%
+95           MDM2  1  1.45%
+98           MLH1  1  1.45%
+99            MLL  1  1.45%
+104           MYC  1  1.45%
+105          MYCN  1  1.45%
+109        NFE2L2  1  1.45%
+110        NOTCH1  1  1.45%
+111        NOTCH2  1  1.45%
+115          NRAS  1  1.45%
+116          NSD1  1  1.45%
+118         NTRK2  1  1.45%
+121          PAX5  1  1.45%
+123         PDCD1  1  1.45%
+126         PDPK1  1  1.45%
+128        PIK3C3  1  1.45%
+130        PIK3CB  1  1.45%
+131        PIK3CD  1  1.45%
+133        PIK3R1  1  1.45%
+135          PMS2  1  1.45%
+138         PPM1D  1  1.45%
+142        PTPN11  1  1.45%
+145          RAC2  1  1.45%
+147         RASA1  1  1.45%
+149         RBM10  1  1.45%
+150        RECQL4  1  1.45%
+152        RICTOR  1  1.45%
+155         RPTOR  1  1.45%
+156         RRAGC  1  1.45%
+157         RTEL1  1  1.45%
+160          SLX4  1  1.45%
+163           SMO  1  1.45%
+165         SOX17  1  1.45%
+166          SOX2  1  1.45%
+167          SOX9  1  1.45%
+168          SPEN  1  1.45%
+170        STAT5A  1  1.45%
+171         STK11  1  1.45%
+174          TAP1  1  1.45%
+175        TCF7L2  1  1.45%
+176           TEK  1  1.45%
+179          TET2  1  1.45%
+180          TOP1  1  1.45%
+183          TSC1  1  1.45%
+184          TSC2  1  1.45%
+185           VHL  1  1.45%
+186          XIAP  1  1.45%</code></pre>
+<pre class="r"><code>#frequency Distribution of Mutated genes
+library(scales)
+table(mskdat_m$Hugo_Symbol)</code></pre>
+<pre><code>
+    ABL1  ANKRD11      APC       AR   ARID1A   ARID1B    ARID2    ASXL2 
+       2        1        4        1        1        1        4        2 
+     ATM      ATR     ATRX      AXL     BAP1     BCL2     BCOR      BLM 
+       4        1        3        1        1        1        2        1 
+    BRAF    BRCA1    BRCA2     BRD4    BRIP1      BTK     CALR   CARD11 
+       4        3        3        1        1        1        1        2 
+     CBL    CCND2    CD274    CDK12   CDKN1B    CENPA    CSDE1   CTNNB1 
+       1        2        1        1        1        2        1        3 
+    CUL3     CYLD     DDR2   DICER1    DOT1L     EGFR   EIF1AX     ELF3 
+       1        1        2        2        4       20        1        1 
+   EP300    EPAS1    EPHA3    EPHA5    EPHA7    EPHB1    ERBB2    ERBB4 
+       3        1        1        4        3        1        2        4 
+   ERCC3    ERCC4      ERG     ESR1     ETV6     FAT1    FBXW7    FGFR4 
+       2        1        1        1        2        3        1        2 
+  FIP1L1     FLT1     FLT3    FOXA1    FOXL2    FUBP1      FYN     GLI1 
+       1        3        2        1        1        1        3        1 
+  GRIN2A    GSK3B    H3F3A      HGF HIST1H1C    HLA-A   HOXB13     IDH1 
+       4        1        1        5        1        1        1        3 
+    IGF1    IGF1R    IKZF1     IL7R    INHBA   INPP4B     INSR     JAK2 
+       1        1        1        2        2        2        1        2 
+    JAK3    KDM5A    KDM5C      KDR    KEAP1      KIT     KLF4    KMT2B 
+       1        1        4        2        5        2        2        2 
+   KMT2C    KMT2D     KRAS    LATS1    LATS2     MDC1     MDM2      MET 
+       2        6        6        1        1        1        1       11 
+     MGA     MLH1      MLL     MLL3     MSH3    MST1R     MTOR      MYC 
+       3        1        1        2        2        2        3        1 
+    MYCN      NBN    NCOR1      NF1   NFE2L2   NOTCH1   NOTCH2   NOTCH3 
+       1        3        2        3        1        1        1        3 
+  NOTCH4     NPM1     NRAS     NSD1    NTRK1    NTRK2    NTRK3     PAK7 
+       2        2        1        1        2        1        5        2 
+    PAX5    PBRM1    PDCD1   PDGFRA   PDGFRB    PDPK1  PIK3C2G   PIK3C3 
+       1        5        1        3        2        1        2        1 
+  PIK3CA   PIK3CB   PIK3CD   PIK3CG   PIK3R1   PIK3R3     PMS2    POLD1 
+       6        1        1        2        1        3        1        2 
+    POLE    PPM1D  PPP2R1A    PREX2     PTEN   PTPN11    PTPRD    PTPRT 
+       4        1        2        2        3        1        6        4 
+    RAC2    RAD50    RASA1      RB1    RBM10   RECQL4      RET   RICTOR 
+       1        2        1       10        1        1        3        1 
+   RNF43     ROS1    RPTOR    RRAGC    RTEL1    SETD2    SF3B1     SLX4 
+       3        3        1        1        1        6        2        1 
+   SMAD4  SMARCA4      SMO     SOS1    SOX17     SOX2     SOX9     SPEN 
+       2        3        1        2        1        1        1        1 
+   STAG2   STAT5A    STK11    STK19      SYK     TAP1   TCF7L2      TEK 
+       2        1        1        2        2        1        1        1 
+    TERT     TET1     TET2     TOP1     TP53     TP63     TSC1     TSC2 
+      10        2        1        1       41        2        1        1 
+     VHL     XIAP    ZFHX3    ZRSR2 
+       1        1        4        2 </code></pre>
+<pre class="r"><code># generating frequency table
+data &lt;- data.frame(table(mskdat_m$Hugo_Symbol))
+# relative frequency
+num_obsrv &lt;- 69
+freq&lt;-data[,2]/num_obsrv
+data_frame &lt;- data.frame(data, freq)
+colnames(data_frame) &lt;- c(&quot;Mutated genes&quot;,&quot;#&quot;,&quot;freq&quot;)
+# order in descending by frequency
+data_frame&lt;-data_frame[order(data_frame$freq,decreasing = TRUE),]
+#converting frequency in percentage with accuracy at 2 decimal place 
+data_frame$freq &lt;- percent(data_frame$freq, accuracy=.01)
+print (data_frame)</code></pre>
+<pre><code>    Mutated genes  #   freq
+181          TP53 41 59.42%
+38           EGFR 20 28.99%
+96            MET 11 15.94%
+148           RB1 10 14.49%
+177          TERT 10 14.49%
+90          KMT2D  6  8.70%
+91           KRAS  6  8.70%
+129        PIK3CA  6  8.70%
+143         PTPRD  6  8.70%
+158         SETD2  6  8.70%
+68            HGF  5  7.25%
+85          KEAP1  5  7.25%
+119         NTRK3  5  7.25%
+122         PBRM1  5  7.25%
+3             APC  4  5.80%
+7           ARID2  4  5.80%
+9             ATM  4  5.80%
+17           BRAF  4  5.80%
+37          DOT1L  4  5.80%
+44          EPHA5  4  5.80%
+48          ERBB4  4  5.80%
+65         GRIN2A  4  5.80%
+83          KDM5C  4  5.80%
+137          POLE  4  5.80%
+144         PTPRT  4  5.80%
+187         ZFHX3  4  5.80%
+11           ATRX  3  4.35%
+18          BRCA1  3  4.35%
+19          BRCA2  3  4.35%
+32         CTNNB1  3  4.35%
+41          EP300  3  4.35%
+45          EPHA7  3  4.35%
+54           FAT1  3  4.35%
+58           FLT1  3  4.35%
+63            FYN  3  4.35%
+72           IDH1  3  4.35%
+97            MGA  3  4.35%
+103          MTOR  3  4.35%
+106           NBN  3  4.35%
+108           NF1  3  4.35%
+112        NOTCH3  3  4.35%
+124        PDGFRA  3  4.35%
+134        PIK3R3  3  4.35%
+141          PTEN  3  4.35%
+151           RET  3  4.35%
+153         RNF43  3  4.35%
+154          ROS1  3  4.35%
+162       SMARCA4  3  4.35%
+1            ABL1  2  2.90%
+8           ASXL2  2  2.90%
+15           BCOR  2  2.90%
+24         CARD11  2  2.90%
+26          CCND2  2  2.90%
+30          CENPA  2  2.90%
+35           DDR2  2  2.90%
+36         DICER1  2  2.90%
+47          ERBB2  2  2.90%
+49          ERCC3  2  2.90%
+53           ETV6  2  2.90%
+56          FGFR4  2  2.90%
+59           FLT3  2  2.90%
+76           IL7R  2  2.90%
+77          INHBA  2  2.90%
+78         INPP4B  2  2.90%
+80           JAK2  2  2.90%
+84            KDR  2  2.90%
+86            KIT  2  2.90%
+87           KLF4  2  2.90%
+88          KMT2B  2  2.90%
+89          KMT2C  2  2.90%
+100          MLL3  2  2.90%
+101          MSH3  2  2.90%
+102         MST1R  2  2.90%
+107         NCOR1  2  2.90%
+113        NOTCH4  2  2.90%
+114          NPM1  2  2.90%
+117         NTRK1  2  2.90%
+120          PAK7  2  2.90%
+125        PDGFRB  2  2.90%
+127       PIK3C2G  2  2.90%
+132        PIK3CG  2  2.90%
+136         POLD1  2  2.90%
+139       PPP2R1A  2  2.90%
+140         PREX2  2  2.90%
+146         RAD50  2  2.90%
+159         SF3B1  2  2.90%
+161         SMAD4  2  2.90%
+164          SOS1  2  2.90%
+169         STAG2  2  2.90%
+172         STK19  2  2.90%
+173           SYK  2  2.90%
+178          TET1  2  2.90%
+182          TP63  2  2.90%
+188         ZRSR2  2  2.90%
+2         ANKRD11  1  1.45%
+4              AR  1  1.45%
+5          ARID1A  1  1.45%
+6          ARID1B  1  1.45%
+10            ATR  1  1.45%
+12            AXL  1  1.45%
+13           BAP1  1  1.45%
+14           BCL2  1  1.45%
+16            BLM  1  1.45%
+20           BRD4  1  1.45%
+21          BRIP1  1  1.45%
+22            BTK  1  1.45%
+23           CALR  1  1.45%
+25            CBL  1  1.45%
+27          CD274  1  1.45%
+28          CDK12  1  1.45%
+29         CDKN1B  1  1.45%
+31          CSDE1  1  1.45%
+33           CUL3  1  1.45%
+34           CYLD  1  1.45%
+39         EIF1AX  1  1.45%
+40           ELF3  1  1.45%
+42          EPAS1  1  1.45%
+43          EPHA3  1  1.45%
+46          EPHB1  1  1.45%
+50          ERCC4  1  1.45%
+51            ERG  1  1.45%
+52           ESR1  1  1.45%
+55          FBXW7  1  1.45%
+57         FIP1L1  1  1.45%
+60          FOXA1  1  1.45%
+61          FOXL2  1  1.45%
+62          FUBP1  1  1.45%
+64           GLI1  1  1.45%
+66          GSK3B  1  1.45%
+67          H3F3A  1  1.45%
+69       HIST1H1C  1  1.45%
+70          HLA-A  1  1.45%
+71         HOXB13  1  1.45%
+73           IGF1  1  1.45%
+74          IGF1R  1  1.45%
+75          IKZF1  1  1.45%
+79           INSR  1  1.45%
+81           JAK3  1  1.45%
+82          KDM5A  1  1.45%
+92          LATS1  1  1.45%
+93          LATS2  1  1.45%
+94           MDC1  1  1.45%
+95           MDM2  1  1.45%
+98           MLH1  1  1.45%
+99            MLL  1  1.45%
+104           MYC  1  1.45%
+105          MYCN  1  1.45%
+109        NFE2L2  1  1.45%
+110        NOTCH1  1  1.45%
+111        NOTCH2  1  1.45%
+115          NRAS  1  1.45%
+116          NSD1  1  1.45%
+118         NTRK2  1  1.45%
+121          PAX5  1  1.45%
+123         PDCD1  1  1.45%
+126         PDPK1  1  1.45%
+128        PIK3C3  1  1.45%
+130        PIK3CB  1  1.45%
+131        PIK3CD  1  1.45%
+133        PIK3R1  1  1.45%
+135          PMS2  1  1.45%
+138         PPM1D  1  1.45%
+142        PTPN11  1  1.45%
+145          RAC2  1  1.45%
+147         RASA1  1  1.45%
+149         RBM10  1  1.45%
+150        RECQL4  1  1.45%
+152        RICTOR  1  1.45%
+155         RPTOR  1  1.45%
+156         RRAGC  1  1.45%
+157         RTEL1  1  1.45%
+160          SLX4  1  1.45%
+163           SMO  1  1.45%
+165         SOX17  1  1.45%
+166          SOX2  1  1.45%
+167          SOX9  1  1.45%
+168          SPEN  1  1.45%
+170        STAT5A  1  1.45%
+171         STK11  1  1.45%
+174          TAP1  1  1.45%
+175        TCF7L2  1  1.45%
+176           TEK  1  1.45%
+179          TET2  1  1.45%
+180          TOP1  1  1.45%
+183          TSC1  1  1.45%
+184          TSC2  1  1.45%
+185           VHL  1  1.45%
+186          XIAP  1  1.45%</code></pre>
+<pre class="r"><code>library(ggplot2)
+library(ggpubr)
+mskdat_cd$Sample &lt;- seq.int(nrow(mskdat_cd))
+ggplot(data = mskdat_cd, aes(x =Fraction.Genome.Altered, y = Mutation.Count,color=Sample,na.rm = TRUE)) + 
+  geom_point(size=2, shape=20,na.rm = TRUE) + stat_cor(method = &quot;pearson&quot;,label.sep=&quot; Pearson Correlation Coef.,&quot;,cor.coef.name = &quot;R&quot;,na.rm = TRUE)+
+  scale_y_continuous(breaks = seq(0, 37, by = 5)) +scale_x_continuous(breaks = seq(0, 1, by = .1))+
+  labs(title = &quot;Mutation Count Vs Fraction Genome Altered &quot;, x = &quot;Fraction Genome Altered&quot;, y = &quot;Mutation Count&quot;)</code></pre>
+<pre><code>Warning: The following aesthetics were dropped during statistical transformation: colour
+i This can happen when ggplot fails to infer the correct grouping structure in
+  the data.
+i Did you forget to specify a `group` aesthetic or to convert a numerical
+  variable into a factor?</code></pre>
+<p><img src="figure/msk_impact_result.Rmd/unnamed-chunk-10-1.png" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>library(ggplot2)
+library(ggpubr)
+mskdat_cd$Sample &lt;- seq.int(nrow(mskdat_cd))
+ggplot(data = mskdat_cd, aes(x =Fraction.Genome.Altered, y = Mutation.Count,color=Sample,na.rm = TRUE)) + 
+  geom_point(size=2, shape=20,na.rm = TRUE) + stat_cor(method = &quot;spearman&quot;,label.sep=&quot; Spearman Correlation Coef.,&quot;, cor.coef.name =&quot;rho&quot;,na.rm = TRUE)+
+  scale_y_continuous(breaks = seq(0, 37, by = 5)) +scale_x_continuous(breaks = seq(0, 1, by = .1))+
+  labs(title = &quot;Mutation Count Vs Fraction Genome Altered &quot;, x = &quot;Fraction Genome Altered&quot;, y = &quot;Mutation Count&quot;)</code></pre>
+<pre><code>Warning: The following aesthetics were dropped during statistical transformation: colour
+i This can happen when ggplot fails to infer the correct grouping structure in
+  the data.
+i Did you forget to specify a `group` aesthetic or to convert a numerical
+  variable into a factor?</code></pre>
+<p><img src="figure/msk_impact_result.Rmd/unnamed-chunk-11-1.png" width="672" style="display: block; margin: auto;" /></p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -1265,21 +1982,25 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] scales_1.1.1    workflowr_1.7.0
+[1] ggpubr_0.5.0    ggplot2_3.4.0   scales_1.2.1    workflowr_1.7.0
 
 loaded via a namespace (and not attached):
- [1] Rcpp_1.0.8.3     highr_0.9        bslib_0.3.1      compiler_4.1.3  
- [5] pillar_1.7.0     later_1.3.0      git2r_0.30.1     jquerylib_0.1.4 
- [9] tools_4.1.3      getPass_0.2-2    digest_0.6.29    jsonlite_1.8.0  
-[13] evaluate_0.15    tibble_3.1.6     lifecycle_1.0.1  pkgconfig_2.0.3 
-[17] rlang_1.0.2      cli_3.2.0        rstudioapi_0.13  yaml_2.3.5      
-[21] xfun_0.30        fastmap_1.1.0    httr_1.4.2       stringr_1.4.0   
-[25] knitr_1.40       sass_0.4.1       fs_1.5.2         vctrs_0.4.0     
-[29] rprojroot_2.0.3  glue_1.6.2       R6_2.5.1         processx_3.5.3  
-[33] fansi_1.0.3      rmarkdown_2.13   callr_3.7.0      magrittr_2.0.3  
-[37] whisker_0.4      ps_1.6.0         promises_1.2.0.1 htmltools_0.5.2 
-[41] ellipsis_0.3.2   colorspace_2.0-3 httpuv_1.6.5     utf8_1.2.2      
-[45] stringi_1.7.6    munsell_0.5.0    crayon_1.5.1    </code></pre>
+ [1] tidyselect_1.1.2 xfun_0.30        bslib_0.3.1      purrr_0.3.4     
+ [5] carData_3.0-5    colorspace_2.0-3 vctrs_0.5.1      generics_0.1.2  
+ [9] htmltools_0.5.2  yaml_2.3.5       utf8_1.2.2       rlang_1.0.6     
+[13] jquerylib_0.1.4  later_1.3.0      pillar_1.7.0     glue_1.6.2      
+[17] withr_2.5.0      lifecycle_1.0.3  stringr_1.4.0    munsell_0.5.0   
+[21] ggsignif_0.6.4   gtable_0.3.0     evaluate_0.15    labeling_0.4.2  
+[25] knitr_1.40       callr_3.7.0      fastmap_1.1.0    httpuv_1.6.5    
+[29] ps_1.6.0         fansi_1.0.3      highr_0.9        broom_0.7.12    
+[33] Rcpp_1.0.8.3     backports_1.4.1  promises_1.2.0.1 jsonlite_1.8.0  
+[37] abind_1.4-5      farver_2.1.0     fs_1.5.2         digest_0.6.29   
+[41] stringi_1.7.6    rstatix_0.7.1    processx_3.5.3   dplyr_1.0.8     
+[45] getPass_0.2-2    rprojroot_2.0.3  grid_4.1.3       cli_3.4.1       
+[49] tools_4.1.3      magrittr_2.0.3   sass_0.4.1       tibble_3.1.6    
+[53] car_3.1-1        tidyr_1.2.0      crayon_1.5.1     whisker_0.4     
+[57] pkgconfig_2.0.3  ellipsis_0.3.2   rmarkdown_2.13   httr_1.4.2      
+[61] rstudioapi_0.13  R6_2.5.1         git2r_0.30.1     compiler_4.1.3  </code></pre>
 </div>
 
 
