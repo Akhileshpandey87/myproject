@@ -80,6 +80,11 @@ ggplot(data = dat, mapping = aes(x = PURITY, y = PLOIDY)) +
   geom_point()
 
 ```
+```{r}
+ggplot(dat, aes(x=PURITY, y = PURITY_CONFUGURATION)) +
+    geom_point(shape=1)      # Use hollow circles
+```
+
 
 ```{r}
 ggplot(dat, aes(x=PURITY)) + geom_histogram(binwidth=.1)
@@ -182,3 +187,75 @@ ggplot(data=dat2, aes(x=Sex, y=Age.at.Diagnosis)) +
 ```
 
 
+#Pan-Cancer MSK-IMPACT MET Validation Cohort (MSK 2022)
+```{r}
+mskdat_p <- read.delim("~/Desktop/myproject/data/mixed_impact_subset_2022/data_clinical_patient.txt",header=TRUE,stringsAsFactor = TRUE,comment.char = "#")
+  head(mskdat_p)
+```
+```{r}
+mskdat_s <- read.delim ("~/Desktop/myproject/data/mixed_impact_subset_2022/data_clinical_sample.txt",header=TRUE,stringsAsFactor = TRUE,comment.char = "#")
+head(mskdat_s)
+```
+```{r}
+mskdat_cna <- read.delim ("~/Desktop/myproject/data/mixed_impact_subset_2022/data_cna.txt",header=TRUE,stringsAsFactor = TRUE,comment.char = "#")
+head(mskdat_cna)
+```
+```{r}
+mskdat_m <- read.delim ("~/Desktop/myproject/data/mixed_impact_subset_2022/data_mutations.txt",header=TRUE,stringsAsFactor = TRUE,comment.char = "#")
+head(mskdat_m)
+```
+
+
+```{r}
+#frequency Distribution of CANCER TYPE
+library(scales)
+table(mskdat_s$CANCER_TYPE)
+# generating frequency table
+data <- data.frame(table(mskdat_s$CANCER_TYPE))
+# relative frequency
+num_obsrv <- sum(table(mskdat_s$CANCER_TYPE))
+freq<-data/num_obsrv
+data_frame <- data.frame(data, freq[,2])
+colnames(data_frame) <- c("data","#","freq")
+# order in descending by frequency
+data_frame<-data_frame[order(data_frame$freq,decreasing = TRUE),]
+#converting frequency in percentage with accuracy at 2 decimal place 
+data_frame$freq <- percent(data_frame$freq, accuracy=.01)
+print (data_frame)
+```
+```{r}
+#frequency Distribution of CANCER TYPE DETAILED
+library(scales)
+table(mskdat_s$CANCER_TYPE_DETAILED)
+# generating frequency table
+data <- data.frame(table(mskdat_s$CANCER_TYPE_DETAILED))
+# relative frequency
+num_obsrv <- sum(table(mskdat_s$CANCER_TYPE_DETAILED))
+freq<-data/num_obsrv
+data_frame <- data.frame(data, freq[,2])
+colnames(data_frame) <- c("data","#","freq")
+# order in descending by frequency
+data_frame<-data_frame[order(data_frame$freq,decreasing = TRUE),]
+#converting frequency in percentage with accuracy at 2 decimal place 
+data_frame$freq <- percent(data_frame$freq, accuracy=.01)
+title(CANCER_TYPE_DETAILED)
+print (data_frame)
+```
+
+```{r}
+#frequency Distribution of CANCER TYPE DETAILED
+library(scales)
+table(mskdat_s$CANCER_TYPE_DETAILED)
+# generating frequency table
+data <- data.frame(table(mskdat_s$CANCER_TYPE_DETAILED))
+# relative frequency
+num_obsrv <- sum(table(mskdat_s$CANCER_TYPE_DETAILED))
+freq<-data/num_obsrv
+data_frame <- data.frame(data, freq[,2])
+colnames(data_frame) <- c("data","#","freq")
+# order in descending by frequency
+data_frame<-data_frame[order(data_frame$freq,decreasing = TRUE),]
+#converting frequency in percentage with accuracy at 2 decimal place 
+data_frame$freq <- percent(data_frame$freq, accuracy=.01)
+print (data_frame)
+```
